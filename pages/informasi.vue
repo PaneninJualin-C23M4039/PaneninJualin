@@ -1,10 +1,10 @@
 <template>
-
+  
 </template>
 
 <script>
   export default {
-    name: 'ContactPage',
+    name: 'InformasiPage',
     layout: 'LandingLayout',
     data() {
       return {
@@ -12,7 +12,7 @@
       }
     },
     head() {
-      const title = 'Contact Page'
+      const title = 'Informasi'
       return { title }
     }
   }

@@ -1,11 +1,5 @@
 <template>
-  <v-main>
-    <v-container fluid>
-      <v-layout justify-center align-center class="my-5">
-        <v-btn style="background-color: #CFFF8D;" class="green--text">Test</v-btn>
-      </v-layout>
-    </v-container>
-  </v-main>
+
 </template>
 
 <script>
@@ -18,7 +12,7 @@ export default {
     }
   },
   head() {
-    const title = 'Home Page'
+    const title = 'Home'
     return { title }
   }
 }

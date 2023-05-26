@@ -1,10 +1,10 @@
 <template>
-
+  
 </template>
 
 <script>
   export default {
-    name: 'AboutPage',
+    name: 'TentangKamiPage',
     layout: 'LandingLayout',
     data() {
       return {
@@ -12,7 +12,7 @@
       }
     },
     head() {
-      const title = 'About Page'
+      const title = 'Tentang Kami'
       return { title }
     }
   }
