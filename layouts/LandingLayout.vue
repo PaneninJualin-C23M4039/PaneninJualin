@@ -43,7 +43,9 @@
     <v-card>
       <v-list>
         <v-list-item v-for="(item, index) in toolbarList" :key="index" @click="toggleMenu = false">
-          <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <nuxt-link style="text-decoration: none; color:#1B5E20;" :to="item.to">
+            <v-list-item-title>{{ item.name }}</v-list-item-title> 
+          </nuxt-link>
         </v-list-item>
       </v-list>
     </v-card>
@@ -74,7 +76,7 @@
         <v-divider color="white"></v-divider>
 
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>PaneninJualin</strong>
+          {{ new Date().getFullYear() }} — <strong>PaneninJualin </strong>developed by <strong>C23-M4039</strong>
         </v-card-text>
       </v-card>
     </v-footer>

@@ -16,7 +16,6 @@
         </v-img>
         </v-col>
       </v-row>
-
     </v-container>
 
     <v-container class="heading-all">
