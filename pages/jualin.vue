@@ -71,25 +71,25 @@
         </v-col>
       </v-row>
       <v-row align="center">
-        <v-col cols="12" md="3">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <h4 class="heading-card">1. Hasil Tani</h4>
             <p class="text-card">Tentu saja yang pertama kali harus disiapkan adalah barangnya.</p>
           </div>
         </v-col>
-        <v-col cols="12" md="3">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <h4 class="heading-card">2. Jenis Tani</h4>
             <p class="text-card">Tentukan jenis tani yang anda ingin jual sesuai dengan pilihan yang sudah kami sediakan.</p>
           </div>
         </v-col>
-        <v-col cols="12" md="3">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <h4 class="heading-card">3. Harga Tani</h4>
             <p class="text-card">Keputusan akhir harga ditangan anda! Tanpa ada campur tangan pihak manapun.</p>
           </div>
         </v-col>
-        <v-col cols="12" md="3">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <h4 class="heading-card">4. Kualitas Produk</h4>
             <p class="text-card">Pastikan produk yang akan anda jual berkualitas sehingga pembeli tidak akan kecewa.</p>
@@ -98,43 +98,44 @@
       </v-row>
     </v-container>
 
-    <v-container class="heading-all">
+    <v-container class="heading-all bg-gray-padding">
       <div class="divider-team"></div>
       <h3 class="about-heading text-center">Jualin Sekarang!</h3>
+      <v-row class="text-center">
+        <v-col cols="12" md="12">
+          <p class="subtitle-">Jual hasil tani anda sekarang melalui form dibawah!</p>
+        </v-col>
+      </v-row>
       <v-row align="center">
-        <v-col cols="12" md="3">
-          <div class="card">
-            <v-img :src="require('../assets/avatar1.png')" class="about-image">
-            </v-img>
-            <h4 class="heading-card">Syaloommuel Sirait</h4>
-            <p class="text-card">Universitas Medan Area | F043XB061</p>
-          </div>
-        </v-col>
-        <v-col cols="12" md="3">
-          <div class="card">
-            <v-img :src="require('../assets/avatar2.png')" class="about-image">
-            </v-img>
-            <h4 class="heading-card">Satyo Gusti Anugrah</h4>
-            <p class="text-card">Universitas Atma Jaya Yogyakarta | F040XB344</p>
-          </div>
-        </v-col>
-        <v-col cols="12" md="3">
-          <div class="card">
-            <v-img :src="require('../assets/avatar3.png')" class="about-image">
-            </v-img>
-            <h4 class="heading-card">Azzam Ghufron Nasution</h4>
-            <p class="text-card">Universitas Malikussaleh | F016XB056</p>
-
-          </div>
-        </v-col>
-        <v-col cols="12" md="3">
-          <div class="card">
-            <v-img :src="require('../assets/avatar2.png')" class="about-image">
-            </v-img>
-            <h4 class="heading-card">Mohammad Hoki Rezky</h4>
-            <p class="text-card">Universitas Bhayangkara Jakarta Raya | F019XB476</p>
-          </div>
-        </v-col>
+        <v-form>
+          <v-container>
+            <v-row align="center" justify="center">
+              <v-col cols="12" sm="6" md="6">
+                <v-text-field filled label="Nama Barang" v-model="formBarang.nama" placeholder="Jeruk 1kg" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="6">
+                <v-select filled label="Jenis" v-model="formBarang.jenis" :items="jenisList" required></v-select>
+              </v-col>
+              <v-col cols="12" sm="6" md="6">
+                <v-text-field append-icon="mdi-currency-usd" filled label="Harga Barang" v-model="formBarang.harga" placeholder="10000" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="6">
+                <v-file-input append-icon="mdi-camera" filled label="Gambar Barang" placeholder="Select Image" accept="image/*" prepend-icon=""></v-file-input>
+              </v-col>
+              <v-col cols="12">
+                <v-textarea filled label="Deskripsi Barang" v-model="formBarang.deskripsi" placeholder="Jeruk sebanyak 1kg hasil impor dari korea. memiliki kualitas yang bagus dan tahan lama" required></v-textarea>
+              </v-col>
+              <v-col cols=12>
+                <v-checkbox required label="Apakah anda sudah yakin?" error-messages="anda harus menyetujui bagian ini"></v-checkbox>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col cols="12">
+                <v-btn large color="primary">Submit</v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-form>
       </v-row>
     </v-container>
 
@@ -147,6 +148,7 @@ export default {
   layout: 'LandingLayout',
   data() {
     return {
+      jenisList: ['Padi', 'Gandum', 'Jagung', 'Kedelai', 'Sayuran', 'Buah-Buahan', 'Kacang-Kacangan', 'Karet', 'Kopi', 'Teh'],
       timelineList: [
         {
           number: '1',
@@ -163,7 +165,13 @@ export default {
           icon: 'mdi-check',
           contentTitle: 'Jual hasil tani anda!'
         }
-      ]
+      ],
+      formBarang: {
+        nama: '',
+        jenis: '',
+        harga: '',
+        deskripsi: '',
+      }
     }
   },
 
@@ -223,7 +231,7 @@ export default {
 
 .divider-team {
   height: 2px;
-  width: 11.5rem;
+  width: 9rem;
   background-color: #36be3f;
   margin: 0 auto 0px;
 }
