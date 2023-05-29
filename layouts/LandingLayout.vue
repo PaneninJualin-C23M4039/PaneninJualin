@@ -1,7 +1,6 @@
-<template>
+<template> 
   <v-app>
-
-    <v-dialog v-model="dialogContact" max-width="600px"> 
+    <v-dialog v-model="dialogContact" max-width="600px">
       <v-card>
         <v-layout align-center justify-center>
           <v-card-title class="green darken-4 mt-4 mb-4 white--text" style="font-weight: 600; border-radius: 5px;">Kontak Kami</v-card-title>
@@ -19,21 +18,41 @@
       </v-card>
     </v-dialog>
 
-    <v-toolbar max-height="64" class="white" elevation="4" fixed>
-      <v-toolbar-title style="padding: 5px; color: #1B5E20; font-weight: 800;">PaneninJualin</v-toolbar-title>
+    <v-app-bar max-height="64" class="white" elevation="4" fixed>
+      <v-toolbar-title class="mr-6" style="color: #1B5E20; font-weight: 800;">PaneninJualin</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items>
+      <v-toolbar-items class="hidden-md-and-up">
+        <v-btn icon @click.stop="toggleMenu = !toggleMenu">
+          <v-icon>mdi-menu</v-icon>
+        </v-btn>
+      </v-toolbar-items>
+      <v-toolbar-items class="hidden-sm-and-down">
         <template v-for="(item, index) in toolbarList">
           <v-btn color="white" elevation="0" style="color: #1B5E20; font-weight: 600;" :to="item.to">{{ item.name }}</v-btn>
         </template>
         <v-btn color="green darken-2" elevation="0" style="color: white; font-weight: 600;" @click="dialogContact = true">Kontak</v-btn>
       </v-toolbar-items>
-    </v-toolbar>
+    </v-app-bar>
+
+      <v-menu v-model="toggleMenu" :close-on-content-click="false" :nudge-width="315" :offset-y="true" bottom right>
+    <template v-slot:activator="{ on }">
+      <v-btn v-on="on" icon>
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
+    </template>
+    <v-card>
+      <v-list>
+        <v-list-item v-for="(item, index) in toolbarList" :key="index" @click="toggleMenu = false">
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-card>
+  </v-menu>
 
     <v-main>
       <Nuxt />
     </v-main>
-    
+
     <v-footer light padless bottom>
       <v-card flat tile class="green darken-4 white--text text-center">
         <v-card-text>
@@ -45,10 +64,10 @@
         </v-card-text>
 
         <v-card-text class="white--text pt-0">
-          PaneninJualin adalah sebuah aplikasi yang didesain khusus untuk membantu petani dalam mendistribusikan hasil panen mereka dengan lebih efisien. 
-          Aplikasi ini memungkinkan petani untuk menjual produk pertanian mereka secara langsung kepada konsumen atau pembeli potensial melalui platform online. 
-          Dengan fitur-fitur seperti 'Jualin', dan 'Informasi', 
-          PaneninJualin memberikan kemudahan bagi petani untuk meningkatkan akses pasar dan meningkatkan pendapatan mereka. Dengan demikian, 
+          PaneninJualin adalah sebuah aplikasi yang didesain khusus untuk membantu petani dalam mendistribusikan hasil panen mereka dengan lebih efisien.
+          Aplikasi ini memungkinkan petani untuk menjual produk pertanian mereka secara langsung kepada konsumen atau pembeli potensial melalui platform online.
+          Dengan fitur-fitur seperti 'Jualin', dan 'Informasi',
+          PaneninJualin memberikan kemudahan bagi petani untuk meningkatkan akses pasar dan meningkatkan pendapatan mereka. Dengan demikian,
           aplikasi ini dapat membantu untuk memperkuat rantai pasok pertanian dan mendukung pertumbuhan ekonomi petani.
         </v-card-text>
 
@@ -59,7 +78,6 @@
         </v-card-text>
       </v-card>
     </v-footer>
-
   </v-app>
 </template>
 
@@ -75,12 +93,10 @@ export default {
         { name: 'Tentang Kami', to: '/tentangKami' },
       ],
       dialogContact: false,
-    }
+      toggleMenu: false,
+    };
   },
-  methods() {
-
-  }
-}
+};
 </script>
 
 <style>
