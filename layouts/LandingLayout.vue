@@ -8,10 +8,13 @@
         <v-card-text>
           <span color="green darken-2" style="font-weight: 600;">Memiliki pertanyaan? isi form dibawah dan langsung hubungi kami!</span>
           <v-form @submit.prevent="submitForm">
-            <v-text-field v-model="name" label="Nama" outlined></v-text-field>
-            <v-text-field v-model="email" label="Email" outlined></v-text-field>
-            <v-textarea v-model="message" label="Pesan" outlined></v-textarea>
-            <v-btn type="submit" color="primary">Kirim</v-btn>
+            <v-text-field v-model="form.name" label="Nama" outlined></v-text-field>
+            <v-text-field v-model="form.email" label="Email" outlined></v-text-field>
+            <v-textarea v-model="form.message" label="Pesan" outlined></v-textarea>
+            <v-btn 
+              type="submit" 
+              color="primary"
+            >Kirim</v-btn>
             <v-btn @click="dialogContact = false" color="error">Batal</v-btn>
           </v-form>
         </v-card-text>
@@ -91,13 +94,25 @@ export default {
       toolbarList: [
         { name: 'Home', to: '/' },
         { name: 'Jualin', to: '/jualin' },
-        { name: 'Panenin', to: '/informasi' },
+        { name: 'Informasi', to: '/informasi' },
         { name: 'Tentang Kami', to: '/tentangKami' },
       ],
       dialogContact: false,
       toggleMenu: false,
+      form: {
+        name: '',
+        email: '',
+        message: ''
+      }
     };
   },
+  methods: {
+    submitForm() {
+      const mailToLink = `mailto:satyogag@gmail.com?subject=Form Submission&body=Name: ${this.form.name}%20Email: ${this.form.email}%21%0 ${this.form.message}`
+      window.location.href = mailToLink
+      this.dialogContact = false
+    }
+  }
 };
 </script>
 

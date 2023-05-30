@@ -26,13 +26,13 @@
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Visi</h3>
           <p class="about-subdescription">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum animi temporibus veniam earum optio excepturi commodi, nisi mollitia magnam officiis fuga eos voluptates sint deleniti nobis recusandae? Ea, illo debitis?
+            Membantu petani untuk menjual hasil taninya tanpa melibatkan pihak manapun, sehingga keuntungan dapat sepenuhnya diterima oleh petani.
           </p>
         </v-col>
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Misi</h3>
           <p class="about-subdescription">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem provident neque totam architecto ipsa ratione reiciendis deleniti unde dicta tempore sapiente veritatis, rerum minima id voluptates quas repellat fugit?
+            Menyediakan platform bagi petani untuk menjual hasil taninya secara mudah dan cepat.
           </p>
         </v-col>
       </v-row>
