@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row align="center" :row-reverse="$vuetify.breakpoint.mdAndUp">
         <v-col cols="12" md="6" class="text-center" order="2" order-md="1">
-          <h2 class="landing-heading">Jual hasil tanimu Bersama kami</h2>
+          <h2 class="landing-heading">Jual Hasil Tanimu Bersama Kami</h2>
           <p class="landing-description">
             Membantu petani meningkatkan pendapatan mereka dengan memperluas
             jangkauan pasar.
@@ -113,11 +113,11 @@
     <v-container fluid>
       <v-row align="center" :row-reverse="$vuetify.breakpoint.mdAndUp">
         <v-col cols="12" md="6" class="text-center" order="2" order-md="1">
-          <h2 class="inform-heading">
-            Ayo buat para petani sejahtera bersama PaneninJualin
+          <h2 class="landing-heading">
+            Ayo Buat Para Petani Sejahtera Bersama PaneninJualin
           </h2>
-          <p class="inform-description">
-            ciptakan kesejahteraan petani untuk hidup yang lebih baik
+          <p class="landing-description">
+            Ciptakan kesejahteraan petani untuk hidup yang lebih baik
           </p>
           <v-btn color="#76FF03" to="/informasi" class="custom-button"
             >Beli Sekarang!</v-btn
@@ -234,6 +234,9 @@ export default {
   border-radius: 50%;
   margin-bottom: 1rem;
 }
+.inform-image {
+  border-radius: 5%;
+}
 
 .heading-card {
   font-size: 18px;
@@ -247,20 +250,6 @@ export default {
   margin-bottom: 0;
   color: #1b5e20;
 }
-.inform-heading {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #1b5e20;
-  line-height: 1.2;
-}
-
-.inform-description {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #1b5e20;
-}
 .custom-button {
   color: #1b5e20;
   margin-top: 20px;
@@ -268,6 +257,12 @@ export default {
 }
 .landing-image {
   max-width: 100%;
+  border-radius: 20%;
+}
+
+.custom-button:hover {
+  background-color: #1b5e20;
+  color: white;
 }
 
 @media (max-width: 768px) {
