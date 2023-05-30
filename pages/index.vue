@@ -1,5 +1,5 @@
 <template>
-
+  
 </template>
 
 <script>
@@ -8,8 +8,14 @@ export default {
   layout: 'LandingLayout',
   data() {
     return {
-
+      
     }
+  },
+  methods: {
+  
+  },
+  created() {
+    
   },
   head() {
     const title = 'Home'
