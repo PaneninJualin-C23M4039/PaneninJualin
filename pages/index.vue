@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="about-section">
     <v-container fluid>
       <v-row align="center" :row-reverse="$vuetify.breakpoint.mdAndUp">
         <v-col cols="12" md="6" class="text-center" order="2" order-md="1">
@@ -8,7 +8,9 @@
             Membantu petani meningkatkan pendapatan mereka dengan memperluas
             jangkauan pasar.
           </p>
-          <v-btn color="green" to="/jualin">Informasi</v-btn>
+          <v-btn color="#76FF03" to="/jualin" class="custom-button"
+            >Jual Sekarang!</v-btn
+          >
         </v-col>
         <v-col cols="12" md="6" class="order-1 order-md-2">
           <v-img
@@ -18,14 +20,15 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container>
-      <div class="divider-layanan"></div>
-      <h3 class="layanan-heading text-center">Layanan Kami</h3>
-      <p class="layanan-description text-center">
+
+    <v-container class="heading-all heading-section">
+      <div class="divider-visi"></div>
+      <h3 class="about-heading text-centerr">Layanan Kami</h3>
+      <p class="about-subdescription text-center">
         Berikut adalah daftar layanan yang kami sediakan:
       </p>
-      <v-row align="center" justify="center">
-        <v-col cols="12" md="3">
+      <v-row class="text-center" justify="center">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
               :src="require('../assets/layanan1.png')"
@@ -38,7 +41,7 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="12" md="3">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
               :src="require('../assets/layanan2.png')"
@@ -51,7 +54,7 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="12" md="3">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
               :src="require('../assets/layanan3.png')"
@@ -66,15 +69,16 @@
       </v-row>
     </v-container>
 
-    <v-container class="divider-choose">
-      <h3 class="choose-heading-center">Mengapa PaneninJualin</h3>
-      <p class="choose-description text-center">
+    <v-container class="heading-all heading-section">
+      <div class="divider-team"></div>
+      <h3 class="about-heading text-center">Mengapa PaneninJualin</h3>
+      <p class="about-subdescription">
         Kami menyediakan layanan yang memudahkan petani untuk menjual hasil tani
         mereka secara online. Berikut adalah beberapa alasan mengapa harus
         menggunakan layanan kami:
       </p>
-      <v-row align="center" justify="center">
-        <v-col cols="12" md="4">
+      <v-row class="text-center" justify="center">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-icon size="48" color="green">mdi-check-circle-outline</v-icon>
             <h4 class="heading-card">Meningkatkan Pendapatan</h4>
@@ -84,7 +88,7 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-icon size="48" color="green">mdi-check-circle-outline</v-icon>
             <h4 class="heading-card">Kualitas Terjamin</h4>
@@ -93,7 +97,7 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-icon size="48" color="green">mdi-check-circle-outline</v-icon>
             <h4 class="heading-card">Mudah dan Aman</h4>
@@ -147,8 +151,8 @@ export default {
 </script>
 
 <style scoped>
-.landing-page {
-  padding: 6rem;
+.heading-all {
+  margin-top: 7rem;
 }
 
 .landing-heading {
@@ -156,33 +160,59 @@ export default {
   font-weight: bold;
   margin-bottom: 20px;
   color: #1b5e20;
+  line-height: 1.2;
 }
 
 .landing-description {
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 30px;
-}
-
-.divider-layanan {
-  width: 100px;
-  height: 5px;
-  background-color: #1b5e20;
-  margin: 0 auto 2rem;
-}
-
-.layanan-heading {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 2rem;
   color: #1b5e20;
 }
 
-.layanan-description {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 30px;
+.divider-visi {
+  height: 2px;
+  width: 8rem;
+  background-color: #36be3f;
+  margin: 0 auto 0px;
+}
+
+.divider-team {
+  height: 2px;
+  width: 9rem;
+  background-color: #36be3f;
+  margin: 0 auto 0px;
+}
+.about-section {
+  padding: 100px 0;
+}
+
+.about-heading {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #1b5e20;
+  line-height: 1.2;
+}
+.heading-section {
   text-align: center;
+  margin-top: 7rem;
+  padding: 0 1rem;
+}
+
+.about-subdescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1b5e20;
+}
+
+.about-image {
+  max-width: 100%;
 }
 
 .card {
@@ -222,67 +252,30 @@ export default {
   font-weight: bold;
   margin-bottom: 20px;
   color: #1b5e20;
+  line-height: 1.2;
 }
 
 .inform-description {
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 30px;
+  color: #1b5e20;
 }
-
-/* Additional Styles */
-
-.landing-page {
-  text-align: center;
-}
-
 .custom-button {
   color: #1b5e20;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-.choose-heading-center {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #1b5e20;
-  text-align: center;
-}
-
-.choose-description {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.v-btn {
-  margin-top: 20px;
-}
-
 .landing-image {
   max-width: 100%;
 }
 
 @media (max-width: 768px) {
-  .landing-page {
-    padding: 3rem;
-  }
-
   .landing-heading {
     font-size: 36px;
   }
 
   .landing-description {
-    font-size: 16px;
-  }
-
-  .layanan-heading {
-    font-size: 24px;
-  }
-
-  .layanan-description {
     font-size: 16px;
   }
 
@@ -292,14 +285,6 @@ export default {
 
   .text-card {
     font-size: 14px;
-  }
-
-  .choose-heading-center {
-    font-size: 24px;
-  }
-
-  .choose-description {
-    font-size: 16px;
   }
 }
 </style>
