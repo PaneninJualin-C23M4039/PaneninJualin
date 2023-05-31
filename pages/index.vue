@@ -110,7 +110,7 @@
       </v-row>
     </v-container>
 
-    <v-container fluid>
+    <v-container fluid style="margin-top: 7rem;">
       <v-row align="center" :row-reverse="$vuetify.breakpoint.mdAndUp">
         <v-col cols="12" md="6" class="text-center" order="2" order-md="1">
           <h2 class="landing-heading">

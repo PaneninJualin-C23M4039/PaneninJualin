@@ -37,22 +37,22 @@
       </v-toolbar-items>
     </v-app-bar>
 
-      <v-menu v-model="toggleMenu" :close-on-content-click="false" :nudge-width="315" :offset-y="true" bottom right>
-    <template v-slot:activator="{ on }">
-      <v-btn v-on="on" icon>
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </template>
-    <v-card>
-      <v-list>
-        <v-list-item v-for="(item, index) in toolbarList" :key="index" @click="toggleMenu = false">
-          <nuxt-link style="text-decoration: none; color:#1B5E20;" :to="item.to">
-            <v-list-item-title>{{ item.name }}</v-list-item-title> 
-          </nuxt-link>
-        </v-list-item>
-      </v-list>
-    </v-card>
-  </v-menu>
+    <v-menu v-model="toggleMenu" :close-on-content-click="false" :nudge-width="315" :offset-y="true" bottom right>
+      <template v-slot:activator="{ on }">
+        <v-btn v-on="on" icon>
+          <v-icon>mdi-menu</v-icon>
+        </v-btn>
+      </template>
+      <v-card>
+        <v-list>
+          <v-list-item v-for="(item, index) in toolbarList" :key="index" @click="toggleMenu = false">
+            <nuxt-link style="text-decoration: none; color:#1B5E20;" :to="item.to">
+              <v-list-item-title>{{ item.name }}</v-list-item-title> 
+            </nuxt-link>
+          </v-list-item>
+        </v-list>
+      </v-card>
+      </v-menu>
 
     <v-main>
       <Nuxt />
@@ -76,6 +76,16 @@
           aplikasi ini dapat membantu untuk memperkuat rantai pasok pertanian dan mendukung pertumbuhan ekonomi petani.
         </v-card-text>
 
+        <v-card-text class="mt-4 white--text font-weight-bold text-decoration-underline" style="font-size: 1rem;">
+          Temukan Kami
+        </v-card-text>
+
+        <v-card-text class="pt-0 mt-0">
+          <v-btn v-for="(item, i) in sosmedList" :key="i" class="white--text" icon href="/" target="_blank">
+            <v-icon size="30px">{{ item.icon }}</v-icon>
+          </v-btn>
+        </v-card-text>
+
         <v-divider color="white"></v-divider>
 
         <v-card-text class="white--text">
@@ -96,6 +106,12 @@ export default {
         { name: 'Jualin', to: '/jualin' },
         { name: 'Informasi', to: '/informasi' },
         { name: 'Tentang Kami', to: '/tentangKami' },
+      ],
+      sosmedList: [
+        { icon: 'mdi-facebook' },
+        { icon: 'mdi-instagram' },
+        { icon: 'mdi-whatsapp' },
+        { icon: 'mdi-twitter' },
       ],
       dialogContact: false,
       toggleMenu: false,
@@ -122,6 +138,13 @@ export default {
 * {
   scroll-behavior: smooth;
   font-family: 'Inter', sans-serif !important;
+}
+
+.divider-layout {
+  height: 1px;
+  width: 10rem;
+  background: #FFFFFF;
+  margin: 0 auto 0px;
 }
 
 </style>
