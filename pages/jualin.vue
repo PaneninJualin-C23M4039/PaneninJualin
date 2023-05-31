@@ -111,6 +111,12 @@
           <v-container>
             <v-row align="center" justify="center">
               <v-col cols="12" sm="6" md="6">
+                <v-text-field filled label="Nama Penjual" v-model="formBarang.namaPenjual" placeholder="Djoko Sumarto" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="6">
+                <v-text-field filled label="Nomor Penjual" v-model="formBarang.whatsapp" placeholder="6289512036461" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="6">
                 <v-text-field filled label="Nama Barang" v-model="formBarang.nama" placeholder="Jeruk 1kg" required></v-text-field>
               </v-col>
               <v-col cols="12" sm="6" md="6">
@@ -167,6 +173,8 @@ export default {
         }
       ],
       formBarang: {
+        namaPenjual: '',
+        whatsapp: '',
         nama: '',
         jenis: '',
         harga: '',
