@@ -111,13 +111,13 @@
           <v-container>
             <v-row align="center" justify="center">
               <v-col cols="12" sm="6" md="6">
-                <v-text-field filled label="Nama Penjual" v-model="formBarang.namaPenjual" placeholder="Djoko Sumarto" required></v-text-field>
+                <v-text-field filled label="Nama Penjual" v-model="formBarang.namaPenjual" placeholder="Djoko Sumarto" pattern="[A-Za-z\s]+" required></v-text-field>
               </v-col>
               <v-col cols="12" sm="6" md="6">
                 <v-text-field filled label="Nomor Penjual" v-model="formBarang.whatsapp" placeholder="6289512036461" required></v-text-field>
               </v-col>
               <v-col cols="12" sm="6" md="6">
-                <v-text-field filled label="Nama Barang" v-model="formBarang.nama" placeholder="Jeruk 1kg" required></v-text-field>
+                <v-text-field filled label="Nama Barang" v-model="formBarang.namaBarang" placeholder="Jeruk 1kg" required></v-text-field>
               </v-col>
               <v-col cols="12" sm="6" md="6">
                 <v-select filled label="Jenis" v-model="formBarang.jenis" :items="jenisList" required></v-select>
@@ -126,18 +126,19 @@
                 <v-text-field append-icon="mdi-currency-usd" filled label="Harga Barang" v-model="formBarang.harga" placeholder="10000" required></v-text-field>
               </v-col>
               <v-col cols="12" sm="6" md="6">
-                <v-file-input append-icon="mdi-camera" filled label="Gambar Barang" placeholder="Select Image" accept="image/*" prepend-icon=""></v-file-input>
+                <v-file-input append-icon="mdi-camera" filled label="Gambar Barang" v-model="formBarang.gambar" placeholder="Select Image" accept="image/*" prepend-icon=""></v-file-input>
               </v-col>
               <v-col cols="12">
                 <v-textarea filled label="Deskripsi Barang" v-model="formBarang.deskripsi" placeholder="Jeruk sebanyak 1kg hasil impor dari korea. memiliki kualitas yang bagus dan tahan lama" required></v-textarea>
               </v-col>
               <v-col cols=12>
-                <v-checkbox required label="Apakah anda sudah yakin?" error-messages="anda harus menyetujui bagian ini"></v-checkbox>
+                <v-checkbox v-model="checkboxChecked" required label="Apakah anda sudah yakin?"></v-checkbox>
+                <p class="mt-0 pt-0">Pastikan anda sudah mengisi seluruh bagian form sebelum mencentang tombol konfirmasi.</p>
               </v-col>
             </v-row>
             <v-row>
               <v-col cols="12">
-                <v-btn large color="primary">Submit</v-btn>
+                <v-btn large color="primary" @click="submitForm" :disabled="!checkboxChecked">Submit</v-btn>
               </v-col>
             </v-row>
           </v-container>
@@ -145,15 +146,24 @@
       </v-row>
     </v-container>
 
+    <v-snackbar v-model="snackbarAttr.value" :color="snackbarAttr.color" timeout="5000">
+      {{ snackbarAttr.message }}
+    </v-snackbar>
+
   </div>
 </template>
 
 <script>
+import { ref as dbref, push } from 'firebase/database';
+import { db, storage } from '~/plugins/firebase';
+import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage'
+
 export default {
   name: 'JualinPage',
   layout: 'LandingLayout',
   data() {
     return {
+      checkboxChecked: false,
       jenisList: ['Padi', 'Gandum', 'Jagung', 'Kedelai', 'Sayuran', 'Buah-Buahan', 'Kacang-Kacangan', 'Karet', 'Kopi', 'Teh'],
       timelineList: [
         {
@@ -175,21 +185,62 @@ export default {
       formBarang: {
         namaPenjual: '',
         whatsapp: '',
-        nama: '',
+        namaBarang: '',
         jenis: '',
         harga: '',
         deskripsi: '',
-      }
+        gambar: '',
+      },
+      snackbarAttr: { value: false, message: '', color: '' }
     }
   },
 
   methods: {
+    // Submit form data to firebase database
+    async submitForm() {
+      try {
+        const file = this.formBarang.gambar
+        const fileRef = storageRef(storage, file.name)
+        await uploadBytes(fileRef, file)
 
+        const imageUrl = await getDownloadURL(fileRef)
+
+        this.formBarang.gambar = imageUrl
+
+        const formDataRef = dbref(db, 'barang');
+        await push(formDataRef, this.formBarang);
+
+        this.setSnackbar(true, 'Berhasil Input Data', 'green')
+      } catch (error) {
+        this.setSnackbar(true, `Gagal Input Data: ${error}`, 'red')
+        console.log(error)
+      }
+
+      this.clearForm()
+    },
+
+    // Clear form data after submit
+    clearForm() {
+      this.formBarang = ''
+    },
+
+    // Set snackbar values based on response
+    setSnackbar(val, msg, color) {
+      this.snackbarAttr.value = val
+      this.snackbarAttr.message = msg
+      this.snackbarAttr.color = color
+    }
   },
 
   mounted() {
 
   },
+
+  computed: {
+    isSubmitDisabled() {
+      return !this.checkboxChecked
+    }
+  },  
 
   head() {
     const title = 'Jualin'
