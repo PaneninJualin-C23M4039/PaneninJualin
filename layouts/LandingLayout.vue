@@ -104,6 +104,7 @@ export default {
       toolbarList: [
         { name: 'Home', to: '/' },
         { name: 'Jualin', to: '/jualin' },
+        { name: 'Belanjain', to: '/belanjain' },
         { name: 'Informasi', to: '/informasi' },
         { name: 'Tentang Kami', to: '/tentangKami' },
       ],

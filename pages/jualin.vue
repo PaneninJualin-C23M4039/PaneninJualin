@@ -24,7 +24,7 @@
       </v-row>
     </v-container>
 
-    <v-section id="readme">
+    <section id="readme">
       <v-container class="heading-all bg-gray-padding">
         <div class="divider-visi"></div>
         <h3 class="about-heading text-center">Tata & Cara</h3>
@@ -57,7 +57,7 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-section>
+    </section>
 
     <v-container class="heading-all">
       <div class="divider-about"></div>
@@ -196,7 +196,7 @@ export default {
   },
 
   methods: {
-    // Submit form data to firebase database
+    // Submit form data ke db firebase
     async submitForm() {
       try {
         const file = this.formBarang.gambar
@@ -219,12 +219,12 @@ export default {
       this.clearForm()
     },
 
-    // Clear form data after submit
+    // Clear form data setelah submit
     clearForm() {
       this.formBarang = ''
     },
 
-    // Set snackbar values based on response
+    // Set message dan color snackbar
     setSnackbar(val, msg, color) {
       this.snackbarAttr.value = val
       this.snackbarAttr.message = msg
@@ -241,6 +241,9 @@ export default {
       return !this.checkboxChecked
     }
   },  
+
+  setup() {
+  },
 
   head() {
     const title = 'Jualin'
