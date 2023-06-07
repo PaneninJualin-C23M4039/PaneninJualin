@@ -87,6 +87,8 @@
                     <v-icon color="white">mdi-shape</v-icon>
                     {{ item.jenis }}
                   </v-chip>
+                </v-card-subtitle>
+                <v-card-subtitle class="py-2">
                   <v-chip color="info" style="color: white;">
                     <v-icon color="white">mdi-account</v-icon>
                     {{ item.namaPenjual }}
@@ -98,6 +100,9 @@
         </v-card-text>
         <v-card-actions>
           <v-btn block color="green darken-2" class="white--text">Checkout</v-btn>
+        </v-card-actions>
+        <v-card-actions class="mt-0 pt-0">
+          <v-btn block color="red darken-2" class="white--text" @click="dialogCart = false">Close</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
