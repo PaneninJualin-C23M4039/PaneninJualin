@@ -71,7 +71,6 @@
           class="mx-1"
           circle
         >
-          {{ page }}
         </v-pagination>
       </v-col>
     </v-row>
@@ -118,7 +117,7 @@
           </v-row>
         </v-card-text>
         <v-card-actions>
-          <v-btn block color="green darken-2" class="white--text">
+          <v-btn block color="green darken-2" class="white--text" @click="checkoutHandler">
             Checkout 
             <span class="circled">({{ itemsCart.length }})</span>
           </v-btn>
@@ -129,7 +128,7 @@
       </v-card>
     </v-dialog>
 
-    <v-snackbar v-model="snackbarAttr.value" :color="snackbarAttr.color" timeout="5000">
+    <v-snackbar v-model="snackbarAttr.value" :color="snackbarAttr.color" timeout="3000">
       {{ snackbarAttr.message }}
     </v-snackbar>
 
@@ -137,7 +136,7 @@
 </template>
 
 <script>
-import { ref as dbRef, onValue } from 'firebase/database'
+import { ref as dbRef, onValue, remove } from 'firebase/database'
 import { db } from '~/plugins/firebase'
 
 export default {
@@ -200,6 +199,51 @@ export default {
     removeFromCart(index) {
       this.itemsCart.splice(index, 1)
       this.setSnackbar(true, 'Berhasil Menghapus dari Keranjang', 'green')
+    },
+
+    removeFromDatabase(item) {
+      // Database ref to firebase.js
+      const itemRef = dbRef(db, `barang/${item.id}`)
+      remove(itemRef)
+        .then(() => {
+          // Hapus item dari variabel items
+          const index = this.items.findIndex((i) => i.id === item.id)
+          if (index !== -1) {
+            this.items.splice(index, 1)
+          }
+
+          // Hapus item dari variabel itemsCart
+          const cartIndex = this.itemsCart.findIndex((iCart) => iCart.id === item.id)
+          if (cartIndex !== -1) {
+            this.itemsCart.splice(cartIndex, 1)
+          }
+          this.setSnackbar(true, 'Berhasil Menghapus dari Keranjang dan RTDB', 'green')
+        })
+        .catch((error) => {
+          this.setSnackbar(true, `Gagal Menghapus dari Keranjang dan RTDB: ${error}`, 'red')
+        })
+    },
+
+    checkoutHandler() {
+      if (this.itemsCart.length === 0){
+        this.setSnackbar(true, 'Keranjang Tidak Boleh Kosong', 'red')
+        return
+      }
+      // Set item di localStorage untuk dicetak pdf
+      localStorage.setItem('keranjang', JSON.stringify(this.itemsCart))
+
+      // Hapus database dari setiap data yang ada dari itemsCart
+      this.itemsCart.forEach((item) => {
+        this.removeFromDatabase(item)
+      })
+
+      this.setSnackbar(true, 'Memindahkan Halaman...', 'orange darken-2')
+
+      setTimeout(() => {
+        this.$router.push({
+          path: '/generatePdf'
+        })
+      }, 5000)
     },
 
     setSnackbar(val, msg, color) {

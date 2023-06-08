@@ -146,7 +146,7 @@
       </v-row>
     </v-container>
 
-    <v-snackbar v-model="snackbarAttr.value" :color="snackbarAttr.color" timeout="5000">
+    <v-snackbar v-model="snackbarAttr.value" :color="snackbarAttr.color" timeout="3000">
       {{ snackbarAttr.message }}
     </v-snackbar>
 
