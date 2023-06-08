@@ -60,6 +60,18 @@
         <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
+              :src="require('../assets/kopi.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Kopi</h4>
+            <p class="text-card">
+               Biji kopi adalah hasil utama yang dihasilkan dari perkebunan kopi. Biji kopi yang matang dipanen dari pohon kopi dan kemudian diolah melalui proses pengupasan kulit buah, fermentasi,dan pemanggangan.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
               :src="require('../assets/jagung.png')"
               class="about-image"
             ></v-img>
@@ -72,12 +84,108 @@
         <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
-              :src="require('../assets/kopi.png')"
+              :src="require('../assets/kedelai.png')"
               class="about-image"
             ></v-img>
-            <h4 class="heading-card">Kopi</h4>
+            <h4 class="heading-card">Kedelai</h4>
             <p class="text-card">
-              Biji kopi adalah hasil utama yang dihasilkan dari perkebunan kopi. Biji kopi yang matang dipanen dari pohon kopi dan kemudian diolah melalui proses pengupasan kulit buah, fermentasi, pengeringan, penggilingan, dan pemanggangan.
+               Kedelai adalah salah satu tanaman jenis polong-polongan yang menjadi bahan dasar banyak sebuah makanan seperti susu, kecap, dan tempe.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/ubi kayu.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Ubi Kayu</h4>
+            <p class="text-card">
+               Ubi kayu merupakan makanan pokok penduduk indonesia, selain itu digunakan sebagai bahan baku industri dan pakan ternak.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/kentang.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Kentang</h4>
+            <p class="text-card">
+               Kentang adalah makanan yang banyak sekali zat-zat yang berguna untuk meningkatkan pH di dalam tubuh manusia, Vitamin C, Karbohidrat, dan  gentian sebagai pengawal tenaga darah.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/jahe.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Jahe</h4>
+            <p class="text-card">
+               Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai rempah-rempah dan bahan baku pengobatan tradisional. Rasa dominan pedas dari jahe disebabkan oleh senyawa keton bernama Zingeron.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/kelapa.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Kelapa</h4>
+            <p class="text-card">
+               Kelapa diyakini dapat mengurangi peradangan, serta menjaga sistem kekebalan tubuh. Selain itu kelapa berperan sebagai anti jamur, antivirus, anti tumor.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/sagu.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Sagu</h4>
+            <p class="text-card">
+               Sagu berfungsi menyehatkan sel-sel pada usus dan paru-paru. Selain itu, melancarkan peredaran dan pembuluh darah di sekitar usus dan paru-paru.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/coklat.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Coklat</h4>
+            <p class="text-card">
+               Coklat bermanfaat untuk mencegah penumpukan kolestrol di dalam pembuluh darah, sehingga menurunkan resiko terjadinya penyakit jantung dan stroke.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/tebu.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Tebu</h4>
+            <p class="text-card">
+               Tebu mengandung berbagai macam nutrisi seperti Karbohidrat, protein, mineral, vitamin, dan antioksdan. Oksidan yang terkandung dalam tebu dapat membantu merawat kulit.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="" md="3">
+          <div class="card">
+            <v-img
+              :src="require('../assets/bawang.png')"
+              class="about-image"
+            ></v-img>
+            <h4 class="heading-card">Bawang</h4>
+            <p class="text-card">
+               Bawang merah mengandung senyawa alil sulfida yang membantu mencegah penyakit jantung. Sedangkan flavonoid quercetin pada bumbu masak ini, membantu menurunkan tekanan darah dan peradangan.
             </p>
           </div>
         </v-col>
