@@ -213,7 +213,6 @@ export default {
         this.setSnackbar(true, 'Berhasil Input Data', 'green')
       } catch (error) {
         this.setSnackbar(true, `Gagal Input Data: ${error}`, 'red')
-        console.log(error)
       }
 
       this.clearForm()

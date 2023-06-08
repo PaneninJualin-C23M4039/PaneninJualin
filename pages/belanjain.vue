@@ -152,7 +152,7 @@ export default {
       snackbarAttr: { value: false, message: '', color: '' },
 
       currentPage: 1,
-      itemsPerPage: 8,
+      itemsPerPage: 4,
     }
   },
 
