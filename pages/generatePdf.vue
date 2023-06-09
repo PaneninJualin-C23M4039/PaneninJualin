@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <v-snackbar v-model="snackbarAttr.value" :color="snackbarAttr.color" timeout="3000">
+    <v-snackbar
+      v-model="snackbarAttr.value"
+      :color="snackbarAttr.color"
+      timeout="3000"
+    >
       {{ snackbarAttr.message }}
     </v-snackbar>
   </div>
@@ -31,7 +35,7 @@ export default {
       })
 
       const documentDefinition = {
-        content : [
+        content: [
           { text: 'Keranjang Belanja', style: 'header' },
           { text: ' ', margin: [0, 10] },
           {
@@ -40,19 +44,19 @@ export default {
               widths: ['*', 'auto', 'auto', 'auto'],
               body: [
                 ['Nama Barang', 'Harga', 'Jenis', 'Penjual'],
-                ...tableRows
-              ]
-            }
-          }
+                ...tableRows,
+              ],
+            },
+          },
         ],
         styles: {
           header: {
             fontSize: 18,
             bold: true,
             alignment: 'center',
-            margin: [0, 0, 0, 10]
-          }
-        }
+            margin: [0, 0, 0, 10],
+          },
+        },
       }
 
       const pdfDocGen = pdfMake.createPdf(documentDefinition)
@@ -62,7 +66,7 @@ export default {
     }
 
     localStorage.clear()
-  }
+  },
 }
 </script>
 

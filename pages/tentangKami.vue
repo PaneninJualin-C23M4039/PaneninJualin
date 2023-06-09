@@ -5,15 +5,20 @@
         <v-col cols="12" md="8" class="text-xs-center">
           <h2 class="about-heading">Tentang Kami</h2>
           <p class="about-description">
-            PaneninJualin adalah sebuah aplikasi yang didesain khusus untuk membantu petani dalam mendistribusikan hasil panen mereka dengan lebih efisien. Aplikasi ini memungkinkan petani untuk menjual produk pertanian mereka secara langsung kepada konsumen atau pembeli potensial melalui platform online. Dengan fitur-fitur seperti 'Jualin' dan 'Informasi', PaneninJualin memberikan kemudahan bagi petani untuk meningkatkan akses pasar dan pendapatan mereka. Aplikasi ini bertujuan untuk memperkuat rantai pasok pertanian dan mendukung pertumbuhan ekonomi petani.
+            PaneninJualin adalah sebuah aplikasi yang didesain khusus untuk
+            membantu petani dalam mendistribusikan hasil panen mereka dengan
+            lebih efisien. Aplikasi ini memungkinkan petani untuk menjual produk
+            pertanian mereka secara langsung kepada konsumen atau pembeli
+            potensial melalui platform online. Dengan fitur-fitur seperti
+            'Jualin' dan 'Informasi', PaneninJualin memberikan kemudahan bagi
+            petani untuk meningkatkan akses pasar dan pendapatan mereka.
+            Aplikasi ini bertujuan untuk memperkuat rantai pasok pertanian dan
+            mendukung pertumbuhan ekonomi petani.
           </p>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img
-          :src="require('../assets/logo.png')"
-          class="about-image"
-          >
-        </v-img>
+          <v-img :src="require('../assets/logo.png')" class="about-image">
+          </v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -22,17 +27,18 @@
       <div class="divider-visi"></div>
       <h3 class="about-heading text-center">Visi & Misi</h3>
       <v-row class="text-center">
-
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Visi</h3>
           <p class="about-subdescription">
-            Membantu petani untuk menjual hasil taninya tanpa melibatkan pihak manapun, sehingga keuntungan dapat sepenuhnya diterima oleh petani.
+            Membantu petani untuk menjual hasil taninya tanpa melibatkan pihak
+            manapun, sehingga keuntungan dapat sepenuhnya diterima oleh petani.
           </p>
         </v-col>
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Misi</h3>
           <p class="about-subdescription">
-            Menyediakan platform bagi petani untuk menjual hasil taninya secara mudah dan cepat.
+            Menyediakan platform bagi petani untuk menjual hasil taninya secara
+            mudah dan cepat.
           </p>
         </v-col>
       </v-row>
@@ -41,10 +47,13 @@
       <div class="divider-about"></div>
       <h3 class="about-heading text-center">Tentang Aplikasi</h3>
       <v-row class="text-center">
-
         <v-col cols="12" md="12">
           <p class="about-subdescription">
-            Aplikasi ini hadir dengan tujuan utama untuk membantu petani dalam mendistribusikan hasil panen mereka dengan lebih efisien dan efektif. Dengan fitur-fitur yang inovatif, kami berkomitmen untuk memperkuat rantai pasok pertanian dan mendukung pertumbuhan ekonomi petani.
+            Aplikasi ini hadir dengan tujuan utama untuk membantu petani dalam
+            mendistribusikan hasil panen mereka dengan lebih efisien dan
+            efektif. Dengan fitur-fitur yang inovatif, kami berkomitmen untuk
+            memperkuat rantai pasok pertanian dan mendukung pertumbuhan ekonomi
+            petani.
           </p>
         </v-col>
       </v-row>
@@ -55,10 +64,7 @@
       <v-row align="center">
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img
-            :src="require('../assets/avatar1.png')"
-            class="about-image"
-            >
+            <v-img :src="require('../assets/avatar1.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Syaloommuel Sirait</h4>
             <p class="text-card">Universitas Medan Area | F043XB061</p>
@@ -66,36 +72,30 @@
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img
-            :src="require('../assets/avatar2.png')"
-            class="about-image"
-            >
+            <v-img :src="require('../assets/avatar2.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Satyo Gusti Anugrah</h4>
-            <p class="text-card">Universitas Atma Jaya Yogyakarta | F040XB344</p>
+            <p class="text-card">
+              Universitas Atma Jaya Yogyakarta | F040XB344
+            </p>
           </div>
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img
-            :src="require('../assets/avatar3.png')"
-            class="about-image"
-            >
+            <v-img :src="require('../assets/avatar3.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Azzam Ghufron Nasution</h4>
             <p class="text-card">Universitas Malikussaleh | F016XB056</p>
-
           </div>
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img
-            :src="require('../assets/avatar2.png')"
-            class="about-image"
-            >
+            <v-img :src="require('../assets/avatar2.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Mohammad Hoki Rezky</h4>
-            <p class="text-card">Universitas Bhayangkara Jakarta Raya | F019XB476</p>
+            <p class="text-card">
+              Universitas Bhayangkara Jakarta Raya | F019XB476
+            </p>
           </div>
         </v-col>
       </v-row>
@@ -104,47 +104,44 @@
 </template>
 
 <script>
-  export default {
-    name: 'TentangKamiPage',
-    layout: 'LandingLayout',
-    data() {
-      return {
-
-      }
-    },
-    head() {
-      const title = 'Tentang Kami'
-      return { title }
-    }
-  }
+export default {
+  name: 'TentangKamiPage',
+  layout: 'LandingLayout',
+  data() {
+    return {}
+  },
+  head() {
+    const title = 'Tentang Kami'
+    return { title }
+  },
+}
 </script>
 <style scoped>
-
-.heading-all{
+.heading-all {
   margin-top: 7rem;
 }
 .divider-visi {
-    height: 2px;
-    width: 10.5rem;
-    background-color: #36be3f;
-    margin: 0 auto 0px;
+  height: 2px;
+  width: 10.5rem;
+  background-color: #36be3f;
+  margin: 0 auto 0px;
 }
 .divider-about {
-    height: 2px;
-    width: 17.5rem;
-    background-color: #36be3f;
-    margin: 0 auto 0px;
+  height: 2px;
+  width: 17.5rem;
+  background-color: #36be3f;
+  margin: 0 auto 0px;
 }
 .divider-team {
-    height: 2px;
-    width: 11.5rem;
-    background-color: #36be3f;
-    margin: 0 auto 0px;
+  height: 2px;
+  width: 11.5rem;
+  background-color: #36be3f;
+  margin: 0 auto 0px;
 }
 .about-section {
   padding: 100px 0;
 }
-.about-we{
+.about-we {
   background-color: rgb(245, 245, 245);
   padding: 0 6rem;
 }
@@ -153,10 +150,10 @@
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
-  color:  #1B5E20;
+  color: #1b5e20;
 }
-.about-subheading{
-  color:  #36833b;
+.about-subheading {
+  color: #36833b;
 }
 
 .about-subdescription {
@@ -176,7 +173,7 @@
   color: #ffffff;
   font-weight: bold;
 }
- 
+
 .about-image {
   max-width: 100%;
 }
@@ -185,7 +182,7 @@
   .text-xs-center {
     text-align: center !important;
   }
-  .about-we{
+  .about-we {
     padding: 0 12px;
   }
   .card {
@@ -195,31 +192,31 @@
   }
 }
 .card {
-    background-color: rgb(255, 255, 255);
-    color: rgba(0, 0, 0, 0.87);
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
-    overflow: hidden;
-    max-width: 355px;
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  overflow: hidden;
+  max-width: 355px;
 }
-.heading-card{
-    padding: 14px;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.334;
-    letter-spacing: 0em;
+.heading-card {
+  padding: 14px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.334;
+  letter-spacing: 0em;
 }
-.text-card{
-    padding: 0 14px;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+.text-card {
+  padding: 0 14px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
 }
 .v-image__image--preload {
   filter: none !important;
   transform: none !important;
 }
-
 </style>

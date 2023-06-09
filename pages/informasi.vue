@@ -5,15 +5,14 @@
         <v-col cols="12" md="8" class="text-xs-center">
           <h2 class="about-heading">Informasi Seputar Hasil Tani</h2>
           <p class="about-description">
-            Hasil tani, sumber kehidupan kita. Biarkan informasi memperkaya pengetahuanmu tentang keajaiban alam yang melimpah di ladang dan kebun.
+            Hasil tani, sumber kehidupan kita. Biarkan informasi memperkaya
+            pengetahuanmu tentang keajaiban alam yang melimpah di ladang dan
+            kebun.
           </p>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img
-          :src="require('../assets/info1.png')"
-          class="about-image"
-          >
-        </v-img>
+          <v-img :src="require('../assets/info1.png')" class="about-image">
+          </v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -22,17 +21,19 @@
       <div class="divider-visi"></div>
       <h3 class="about-heading text-center">Manfaat & Tujuan</h3>
       <v-row class="text-center">
-
         <v-col cols="12" md="6">
-          <h3 class="about-subheading">Manfaat </h3>
+          <h3 class="about-subheading">Manfaat</h3>
           <p class="about-subdescription">
-            Pertanian memberikan sumber penghasilan bagi petani dan masyarakat pedesaan. Sebagai sektor ekonomi yang penting, pertanian menciptakan lapangan kerja bagi jutaan orang di seluruh dunia.
+            Pertanian memberikan sumber penghasilan bagi petani dan masyarakat
+            pedesaan. Sebagai sektor ekonomi yang penting, pertanian menciptakan
+            lapangan kerja bagi jutaan orang di seluruh dunia.
           </p>
         </v-col>
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Tujuan</h3>
           <p class="about-subdescription">
-            Hasil tani juga bertujuan untuk menyediakan makanan yang aman dan bebas dari kontaminasi.
+            Hasil tani juga bertujuan untuk menyediakan makanan yang aman dan
+            bebas dari kontaminasi.
           </p>
         </v-col>
       </v-row>
@@ -53,7 +54,8 @@
             ></v-img>
             <h4 class="heading-card">Beras</h4>
             <p class="text-card">
-              Beras adalah salah satu hasil tani yang paling penting dan banyak dikonsumsi di dunia.
+              Beras adalah salah satu hasil tani yang paling penting dan banyak
+              dikonsumsi di dunia.
             </p>
           </div>
         </v-col>
@@ -65,7 +67,9 @@
             ></v-img>
             <h4 class="heading-card">Kopi</h4>
             <p class="text-card">
-               Biji kopi adalah hasil utama yang dihasilkan dari perkebunan kopi. Biji kopi yang matang dipanen dari pohon kopi dan kemudian diolah melalui proses pengupasan kulit buah, fermentasi,dan pemanggangan.
+              Biji kopi adalah hasil utama yang dihasilkan dari perkebunan kopi.
+              Biji kopi yang matang dipanen dari pohon kopi dan kemudian diolah
+              melalui proses pengupasan kulit buah, fermentasi,dan pemanggangan.
             </p>
           </div>
         </v-col>
@@ -77,7 +81,9 @@
             ></v-img>
             <h4 class="heading-card">Jagung</h4>
             <p class="text-card">
-               jagung adalah tanaman biji-bijian yang penting dan serbaguna dengan banyak kegunaan dalam makanan, pakan ternak, biofuel, dan industri lainnya.
+              jagung adalah tanaman biji-bijian yang penting dan serbaguna
+              dengan banyak kegunaan dalam makanan, pakan ternak, biofuel, dan
+              industri lainnya.
             </p>
           </div>
         </v-col>
@@ -89,7 +95,9 @@
             ></v-img>
             <h4 class="heading-card">Kedelai</h4>
             <p class="text-card">
-               Kedelai adalah salah satu tanaman jenis polong-polongan yang menjadi bahan dasar banyak sebuah makanan seperti susu, kecap, dan tempe.
+              Kedelai adalah salah satu tanaman jenis polong-polongan yang
+              menjadi bahan dasar banyak sebuah makanan seperti susu, kecap, dan
+              tempe.
             </p>
           </div>
         </v-col>
@@ -101,7 +109,8 @@
             ></v-img>
             <h4 class="heading-card">Ubi Kayu</h4>
             <p class="text-card">
-               Ubi kayu merupakan makanan pokok penduduk indonesia, selain itu digunakan sebagai bahan baku industri dan pakan ternak.
+              Ubi kayu merupakan makanan pokok penduduk indonesia, selain itu
+              digunakan sebagai bahan baku industri dan pakan ternak.
             </p>
           </div>
         </v-col>
@@ -113,7 +122,9 @@
             ></v-img>
             <h4 class="heading-card">Kentang</h4>
             <p class="text-card">
-               Kentang adalah makanan yang banyak sekali zat-zat yang berguna untuk meningkatkan pH di dalam tubuh manusia, Vitamin C, Karbohidrat, dan  gentian sebagai pengawal tenaga darah.
+              Kentang adalah makanan yang banyak sekali zat-zat yang berguna
+              untuk meningkatkan pH di dalam tubuh manusia, Vitamin C,
+              Karbohidrat, dan gentian sebagai pengawal tenaga darah.
             </p>
           </div>
         </v-col>
@@ -125,7 +136,9 @@
             ></v-img>
             <h4 class="heading-card">Jahe</h4>
             <p class="text-card">
-               Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai rempah-rempah dan bahan baku pengobatan tradisional. Rasa dominan pedas dari jahe disebabkan oleh senyawa keton bernama Zingeron.
+              Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai
+              rempah-rempah dan bahan baku pengobatan tradisional. Rasa dominan
+              pedas dari jahe disebabkan oleh senyawa keton bernama Zingeron.
             </p>
           </div>
         </v-col>
@@ -137,7 +150,9 @@
             ></v-img>
             <h4 class="heading-card">Kelapa</h4>
             <p class="text-card">
-               Kelapa diyakini dapat mengurangi peradangan, serta menjaga sistem kekebalan tubuh. Selain itu kelapa berperan sebagai anti jamur, antivirus, anti tumor.
+              Kelapa diyakini dapat mengurangi peradangan, serta menjaga sistem
+              kekebalan tubuh. Selain itu kelapa berperan sebagai anti jamur,
+              antivirus, anti tumor.
             </p>
           </div>
         </v-col>
@@ -149,7 +164,9 @@
             ></v-img>
             <h4 class="heading-card">Sagu</h4>
             <p class="text-card">
-               Sagu berfungsi menyehatkan sel-sel pada usus dan paru-paru. Selain itu, melancarkan peredaran dan pembuluh darah di sekitar usus dan paru-paru.
+              Sagu berfungsi menyehatkan sel-sel pada usus dan paru-paru. Selain
+              itu, melancarkan peredaran dan pembuluh darah di sekitar usus dan
+              paru-paru.
             </p>
           </div>
         </v-col>
@@ -161,7 +178,9 @@
             ></v-img>
             <h4 class="heading-card">Coklat</h4>
             <p class="text-card">
-               Coklat bermanfaat untuk mencegah penumpukan kolestrol di dalam pembuluh darah, sehingga menurunkan resiko terjadinya penyakit jantung dan stroke.
+              Coklat bermanfaat untuk mencegah penumpukan kolestrol di dalam
+              pembuluh darah, sehingga menurunkan resiko terjadinya penyakit
+              jantung dan stroke.
             </p>
           </div>
         </v-col>
@@ -173,7 +192,9 @@
             ></v-img>
             <h4 class="heading-card">Tebu</h4>
             <p class="text-card">
-               Tebu mengandung berbagai macam nutrisi seperti Karbohidrat, protein, mineral, vitamin, dan antioksdan. Oksidan yang terkandung dalam tebu dapat membantu merawat kulit.
+              Tebu mengandung berbagai macam nutrisi seperti Karbohidrat,
+              protein, mineral, vitamin, dan antioksdan. Oksidan yang terkandung
+              dalam tebu dapat membantu merawat kulit.
             </p>
           </div>
         </v-col>
@@ -185,57 +206,54 @@
             ></v-img>
             <h4 class="heading-card">Bawang</h4>
             <p class="text-card">
-               Bawang merah mengandung senyawa alil sulfida yang membantu mencegah penyakit jantung. Sedangkan flavonoid quercetin pada bumbu masak ini, membantu menurunkan tekanan darah dan peradangan.
+              Bawang merah mengandung senyawa alil sulfida yang membantu
+              mencegah penyakit jantung. Sedangkan flavonoid quercetin pada
+              bumbu masak ini, membantu menurunkan tekanan darah dan peradangan.
             </p>
           </div>
         </v-col>
       </v-row>
     </v-container>
-    
   </div>
 </template>
 
-
 <script>
-  export default {
-    name: 'InformasiPage',
-    layout: 'LandingLayout',
-    data() {
-      return {
-
-      }
-    },
-    head() {
-      const title = 'Informasi'
-      return { title }
-    }
-  }
+export default {
+  name: 'InformasiPage',
+  layout: 'LandingLayout',
+  data() {
+    return {}
+  },
+  head() {
+    const title = 'Informasi'
+    return { title }
+  },
+}
 </script>
 <style scoped>
-
-.heading-all{
+.heading-all {
   margin-top: 7rem;
 }
 
 .divider-visi {
-    height: 2px;
-    width: 10.5rem;
-    background-color: #36be3f;
-    margin: 0 auto 0px;
+  height: 2px;
+  width: 10.5rem;
+  background-color: #36be3f;
+  margin: 0 auto 0px;
 }
 
 .divider-about {
-    height: 2px;
-    width: 17.5rem;
-    background-color: #36be3f;
-    margin: 0 auto 0px;
+  height: 2px;
+  width: 17.5rem;
+  background-color: #36be3f;
+  margin: 0 auto 0px;
 }
 
 .about-section {
   padding: 100px 0;
 }
 
-.about-we{
+.about-we {
   background-color: rgb(245, 245, 245);
   padding: 0 6rem;
 }
@@ -244,11 +262,11 @@
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
-  color:  #1B5E20;
+  color: #1b5e20;
 }
 
-.about-subheading{
-  color:  #36833b;
+.about-subheading {
+  color: #36833b;
 }
 
 .about-subdescription {
@@ -334,7 +352,7 @@
   .text-xs-center {
     text-align: center !important;
   }
-  .about-we{
+  .about-we {
     padding: 0 12px;
   }
 }
@@ -364,5 +382,4 @@
   filter: none !important;
   transform: none !important;
 }
-
 </style>

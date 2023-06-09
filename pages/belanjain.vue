@@ -2,49 +2,70 @@
   <v-container fluid class="container container__item-list">
     <h3 class="text-center text-title">
       <span class="text-highlight">Belanjain</span>
-       di PaneninJualin
+      di PaneninJualin
     </h3>
     <v-row class="text-center mt-1 mb-5 pb-5">
       <v-col cols="12" md="12">
-        <span>Temukan hasil tani terbaik hanya di menu 
-          <span class="text-highlight">Belanjain</span> 
+        <span
+          >Temukan hasil tani terbaik hanya di menu
+          <span class="text-highlight">Belanjain</span>
           oleh PaneninJualin!
         </span>
       </v-col>
       <div class="divider mt-2"></div>
-    </v-row> 
+    </v-row>
     <v-row>
-      <v-col cols="12" lg="3" md="4" sm="6" v-for="item in paginatedItems" :key="item.id">
+      <v-col
+        cols="12"
+        lg="3"
+        md="4"
+        sm="6"
+        v-for="item in paginatedItems"
+        :key="item.id"
+      >
         <v-card class="mx-auto" max-width="344" elevation="3">
           <v-img :src="item.gambar" height="200px"></v-img>
-          <v-card-title class="font-weight-medium">{{ item.namaBarang }}</v-card-title>
+          <v-card-title class="font-weight-medium">{{
+            item.namaBarang
+          }}</v-card-title>
           <v-card-subtitle class="py-2">
-            <v-chip color="green" style="color: white;">
+            <v-chip color="green" style="color: white">
               <v-icon color="white">mdi-currency-usd</v-icon>
               {{ item.harga }}
             </v-chip>
-            <v-chip color="orange darken-2" style="color: white;">
+            <v-chip color="orange darken-2" style="color: white">
               <v-icon color="white">mdi-shape</v-icon>
               ‎ {{ item.jenis }}
             </v-chip>
           </v-card-subtitle>
           <v-card-subtitle class="py-2">
-            <v-chip elevation="3" color="green darken-2" style="color: white;" :href="`https://wa.me/${item.whatsapp}`" target="_blank" rel="noopener noreferrer">
+            <v-chip
+              elevation="3"
+              color="green darken-2"
+              style="color: white"
+              :href="`https://wa.me/${item.whatsapp}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <v-icon color="white">mdi-whatsapp</v-icon>
               ‎ {{ item.whatsapp }}
             </v-chip>
           </v-card-subtitle>
           <v-card-subtitle class="py-2">
-            <v-chip color="info" style="color: white;">
+            <v-chip color="info" style="color: white">
               <v-icon color="white">mdi-account</v-icon>
               ‎ {{ item.namaPenjual }}
             </v-chip>
           </v-card-subtitle>
           <v-card-actions>
-            <v-btn color="green darken-4" text @click="toggleExpanded(item)">Lebih Lanjut</v-btn>
+            <v-btn color="green darken-4" text @click="toggleExpanded(item)"
+              >Lebih Lanjut</v-btn
+            >
             <v-spacer></v-spacer>
             <v-btn icon @click="toggleExpanded(item)">
-              <v-icon>{{ item.expanded ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+              <v-icon>{{
+                item.expanded ? 'mdi-chevron-up' : 'mdi-chevron-down'
+              }}</v-icon>
             </v-btn>
           </v-card-actions>
           <v-expand-transition>
@@ -54,7 +75,13 @@
                 {{ item.deskripsi }}
               </v-card-text>
               <v-card-actions>
-                <v-btn block color="green darken-2" class="white--text" @click="inputToCart(item)">Masukkan Keranjang</v-btn>
+                <v-btn
+                  block
+                  color="green darken-2"
+                  class="white--text"
+                  @click="inputToCart(item)"
+                  >Masukkan Keranjang</v-btn
+                >
               </v-card-actions>
             </div>
           </v-expand-transition>
@@ -77,61 +104,91 @@
 
     <!-- Dialog dan Button dengan Model -->
 
-    <v-btn class="btn-cart" v-show="btnCart" fab elevation="3" color="green darken-2" @click="dialogCart = true">
+    <v-btn
+      class="btn-cart"
+      v-show="btnCart"
+      fab
+      elevation="3"
+      color="green darken-2"
+      @click="dialogCart = true"
+    >
       <v-icon color="white">mdi-cart</v-icon>
     </v-btn>
 
     <v-dialog v-model="dialogCart" max-width="600">
       <v-card>
         <v-card-title class="font-weight-bold">Keranjang Anda</v-card-title>
-        <v-card-subtitle>Halaman ini akan menampilkan barang yang anda masukkan kedalam keranjang.</v-card-subtitle>
+        <v-card-subtitle
+          >Halaman ini akan menampilkan barang yang anda masukkan kedalam
+          keranjang.</v-card-subtitle
+        >
         <v-card-text>
           <v-row>
             <v-col cols="12" v-for="(item, index) in itemsCart" :key="index">
               <v-card outlined shaped color="green darken-2">
                 <v-img :src="item.gambar" height="150px"></v-img>
                 <v-card-title>
-                  <span style="color: white;">{{ item.namaBarang }}</span>
+                  <span style="color: white">{{ item.namaBarang }}</span>
                 </v-card-title>
                 <v-card-subtitle class="py-2">
-                  <v-chip color="green" style="color: white;">
+                  <v-chip color="green" style="color: white">
                     <v-icon color="white">mdi-currency-usd</v-icon>
                     {{ item.harga }}
                   </v-chip>
-                  <v-chip color="orange" style="color: white;">
+                  <v-chip color="orange" style="color: white">
                     <v-icon color="white">mdi-shape</v-icon>
                     {{ item.jenis }}
                   </v-chip>
                 </v-card-subtitle>
                 <v-card-subtitle class="py-2">
-                  <v-chip color="info" style="color: white;">
+                  <v-chip color="info" style="color: white">
                     <v-icon color="white">mdi-account</v-icon>
                     {{ item.namaPenjual }}
                   </v-chip>
                 </v-card-subtitle>
                 <v-card-actions>
-                  <v-btn block color="red darken-2" class="white--text" @click="removeFromCart(index)">Hapus</v-btn>
+                  <v-btn
+                    block
+                    color="red darken-2"
+                    class="white--text"
+                    @click="removeFromCart(index)"
+                    >Hapus</v-btn
+                  >
                 </v-card-actions>
               </v-card>
             </v-col>
           </v-row>
         </v-card-text>
         <v-card-actions>
-          <v-btn block color="green darken-2" class="white--text" @click="checkoutHandler">
-            Checkout 
+          <v-btn
+            block
+            color="green darken-2"
+            class="white--text"
+            @click="checkoutHandler"
+          >
+            Checkout
             <span class="circled">({{ itemsCart.length }})</span>
           </v-btn>
         </v-card-actions>
         <v-card-actions class="mt-0 pt-0">
-          <v-btn block color="red darken-2" class="white--text" @click="dialogCart = false">Close</v-btn>
+          <v-btn
+            block
+            color="red darken-2"
+            class="white--text"
+            @click="dialogCart = false"
+            >Close</v-btn
+          >
         </v-card-actions>
       </v-card>
     </v-dialog>
 
-    <v-snackbar v-model="snackbarAttr.value" :color="snackbarAttr.color" timeout="3000">
+    <v-snackbar
+      v-model="snackbarAttr.value"
+      :color="snackbarAttr.color"
+      timeout="3000"
+    >
       {{ snackbarAttr.message }}
     </v-snackbar>
-
   </v-container>
 </template>
 
@@ -166,7 +223,7 @@ export default {
 
     pageCount() {
       return Math.ceil(this.items.length / this.itemsPerPage)
-    }
+    },
   },
 
   methods: {
@@ -181,7 +238,9 @@ export default {
     inputToCart(item) {
       this.btnCart = true
 
-      const existingItem = this.itemsCart.find((cartItem) => cartItem.id === item.id)
+      const existingItem = this.itemsCart.find(
+        (cartItem) => cartItem.id === item.id
+      )
 
       if (existingItem) {
         this.setSnackbar(true, 'Barang Sudah Ada di Keranjang', 'red')
@@ -190,10 +249,13 @@ export default {
           this.itemsCart.push(item)
           this.setSnackbar(true, 'Berhasil Menambahkan ke Keranjang', 'green')
         } catch (error) {
-          this.setSnackbar(true, `Gagal Menambahkan ke Keranjang: ${error}`, 'green')
+          this.setSnackbar(
+            true,
+            `Gagal Menambahkan ke Keranjang: ${error}`,
+            'green'
+          )
         }
       }
-
     },
 
     removeFromCart(index) {
@@ -213,19 +275,29 @@ export default {
           }
 
           // Hapus item dari variabel itemsCart
-          const cartIndex = this.itemsCart.findIndex((iCart) => iCart.id === item.id)
+          const cartIndex = this.itemsCart.findIndex(
+            (iCart) => iCart.id === item.id
+          )
           if (cartIndex !== -1) {
             this.itemsCart.splice(cartIndex, 1)
           }
-          this.setSnackbar(true, 'Berhasil Menghapus dari Keranjang dan RTDB', 'green')
+          this.setSnackbar(
+            true,
+            'Berhasil Menghapus dari Keranjang dan RTDB',
+            'green'
+          )
         })
         .catch((error) => {
-          this.setSnackbar(true, `Gagal Menghapus dari Keranjang dan RTDB: ${error}`, 'red')
+          this.setSnackbar(
+            true,
+            `Gagal Menghapus dari Keranjang dan RTDB: ${error}`,
+            'red'
+          )
         })
     },
 
     checkoutHandler() {
-      if (this.itemsCart.length === 0){
+      if (this.itemsCart.length === 0) {
         this.setSnackbar(true, 'Keranjang Tidak Boleh Kosong', 'red')
         return
       }
@@ -241,7 +313,7 @@ export default {
 
       setTimeout(() => {
         this.$router.push({
-          path: '/generatePdf'
+          path: '/generatePdf',
         })
       }, 5000)
     },
@@ -250,12 +322,12 @@ export default {
       this.snackbarAttr.value = val
       this.snackbarAttr.message = msg
       this.snackbarAttr.color = color
-    }
-  },  
+    },
+  },
 
   created() {
-      onValue(dbRef(db, 'barang'), (snapshot) => {
-        this.items = [],
+    onValue(dbRef(db, 'barang'), (snapshot) => {
+      ;(this.items = []),
         snapshot.forEach((item) => {
           this.items.push({
             id: item.key,
@@ -269,19 +341,19 @@ export default {
             expanded: false,
           })
         })
-      })
+    })
 
-      if (this.items.length) {
-        this.setSnackbar(true, 'Berhasil Mendapatkan Data', 'green')
-      } else{
-        this.setSnackbar(true, 'Gagal Mendapatkan Data', 'red')
-      }
+    if (this.items.length) {
+      this.setSnackbar(true, 'Berhasil Mendapatkan Data', 'green')
+    } else {
+      this.setSnackbar(true, 'Gagal Mendapatkan Data', 'red')
+    }
   },
 
   head() {
     const title = 'Belanjain'
     return { title }
-  }
+  },
 }
 </script>
 
@@ -301,20 +373,20 @@ export default {
 .text-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #1B5E20;
+  color: #1b5e20;
 }
 
 .text-highlight {
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 5px;
-  background-color: #1B5E20;
+  background-color: #1b5e20;
 }
 
 .divider {
   height: 2px;
   width: 12rem;
   margin: 0 auto 0;
-  background-color: #1B5E20;
+  background-color: #1b5e20;
 }
 
 @media (max-width: 1000px) {
