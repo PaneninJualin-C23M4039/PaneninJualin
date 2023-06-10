@@ -371,8 +371,8 @@ export default {
 }
 .btn-cart {
   position: fixed;
-  bottom: 70px;
-  right: 40px;
+  bottom: 30px;
+  right: 30px;
 }
 .container {
   padding: 100px;

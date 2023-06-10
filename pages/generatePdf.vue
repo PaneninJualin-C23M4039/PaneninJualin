@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <v-snackbar
-      v-model="snackbarAttr.value"
-      :color="snackbarAttr.color"
-      timeout="3000"
-    >
-      {{ snackbarAttr.message }}
-    </v-snackbar>
+    <v-layout align-center justify-center column>
+      <span class="animate__animated animate__backInDown text-green darken-2" style="font-size: 3rem; font-weight: 600;">Terima Kasih!</span>
+      <span>sudah menggunakan PaneninJualin sebagai platform jual beli hasil tani!. Sampai bertemu di pemesanan berikutnya!</span>
+      <span>
+        <a href="/">Kembali ke Home</a>
+      </span>
+    </v-layout>
   </div>
 </template>
 <script>
@@ -24,6 +24,7 @@ export default {
   },
 
   created() {
+    const orderId = Math.floor(Math.random() * 10) + 1
     const itemsCart = JSON.parse(localStorage.getItem('keranjang'))
 
     if (itemsCart && itemsCart.length > 0) {
@@ -35,9 +36,10 @@ export default {
       })
 
       const documentDefinition = {
+        watermark: { text: '© PaneninJualin ©', color: 'green', opacity: 0.3, bold: false, italics: true },
         content: [
           { text: 'Keranjang Belanja', style: 'header' },
-          { text: ' ', margin: [0, 10] },
+          { text: 'Berikut adalah hasil cetak checkout dari keranjang belanja anda.', margin: [0, 10] },
           {
             table: {
               headerRows: 1,
@@ -48,6 +50,9 @@ export default {
               ],
             },
           },
+          { text: 'Transfer QRIS melalui barcode dibawah.', style: 'textTransfer' },
+          { qr: 'PaneninJualin Dummy QRCode', fit: '160', style: 'alignLeft' },
+          { text: 'Terima kasih sudah mempercayai platform PaneninJualin, sampai bertemu di pemesanan berikutnya!', alignment: 'center', margin: [0, 40] }
         ],
         styles: {
           header: {
@@ -56,13 +61,21 @@ export default {
             alignment: 'center',
             margin: [0, 0, 0, 10],
           },
+          textTransfer: {
+            fontSize: 12,
+            alignment: 'left',
+            margin: [0, 20, 0, 10],
+          },
+          alignLeft: {
+            alignment: 'left',
+          }
         },
       }
 
       const pdfDocGen = pdfMake.createPdf(documentDefinition)
-      pdfDocGen.download('keranjang_belanja.pdf')
+      pdfDocGen.download(`Keranjang_Belanja_${orderId}.pdf`)
     } else {
-      console.log('cek disini data localstorage ga kebawa')
+      console.log('cek disini kalau localstorage ga kebawa')
     }
 
     localStorage.clear()
