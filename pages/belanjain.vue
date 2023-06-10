@@ -15,6 +15,14 @@
       <div class="divider mt-2"></div>
     </v-row>
     <v-row>
+      <v-col cols="12">
+        <v-text-field v-model="searchQuery" label="Search" placeholder="Jeruk 5kg" outlined dense></v-text-field>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-layout align-center justify-center v-if="paginatedItems.length === 0">
+        <span>Tidak ada barang dengan nama <strong>" {{ searchQuery }} "</strong></span>
+      </v-layout>
       <v-col
         cols="12"
         lg="3"
@@ -149,7 +157,7 @@
                 <v-card-actions>
                   <v-btn
                     block
-                    color="red darken-2"
+                    color="red"
                     class="white--text"
                     @click="removeFromCart(index)"
                     >Hapus</v-btn
@@ -207,6 +215,7 @@ export default {
       itemsCart: [],
       dialogCart: false,
       snackbarAttr: { value: false, message: '', color: '' },
+      searchQuery: '',
 
       currentPage: 1,
       itemsPerPage: 4,
@@ -218,7 +227,11 @@ export default {
       const startIndex = (this.currentPage - 1) * this.itemsPerPage
       const endIndex = startIndex + this.itemsPerPage
 
-      return this.items.slice(startIndex, endIndex)
+      const foundItems = this.items.filter((item) => 
+        item.namaBarang.toLowerCase().includes(this.searchQuery.toLowerCase())
+      )
+
+      return foundItems.slice(startIndex, endIndex)
     },
 
     pageCount() {
@@ -281,11 +294,6 @@ export default {
           if (cartIndex !== -1) {
             this.itemsCart.splice(cartIndex, 1)
           }
-          this.setSnackbar(
-            true,
-            'Berhasil Menghapus dari Keranjang dan RTDB',
-            'green'
-          )
         })
         .catch((error) => {
           this.setSnackbar(
@@ -363,8 +371,8 @@ export default {
 }
 .btn-cart {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 70px;
+  right: 40px;
 }
 .container {
   padding: 100px;

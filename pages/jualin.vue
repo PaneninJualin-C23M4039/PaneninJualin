@@ -257,6 +257,7 @@ export default {
         'Karet',
         'Kopi',
         'Teh',
+        'Lain-Lainnya',
       ],
       timelineList: [
         {
@@ -282,7 +283,7 @@ export default {
         jenis: '',
         harga: '',
         deskripsi: '',
-        gambar: '',
+        gambar: null,
       },
       snackbarAttr: { value: false, message: '', color: '' },
     }
