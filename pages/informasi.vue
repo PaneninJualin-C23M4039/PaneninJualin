@@ -18,7 +18,7 @@
     </v-container>
 
     <v-container class="heading-all">
-      <div class="divider-visi"></div>
+      <div class="divider-visi mb-1"></div>
       <h3 class="about-heading text-center">Manfaat & Tujuan</h3>
       <v-row class="text-center">
         <v-col cols="12" md="6">
@@ -40,179 +40,36 @@
     </v-container>
 
     <v-container class="heading-all heading-section">
-      <div class="divider-info"></div>
-      <h3 class="about-heading text-centerr">Hasil Tani</h3>
+      <div class="divider-visi mb-1"></div>
+      <h3 class="about-heading text-center">Hasil Tani</h3>
       <p class="about-subdescription text-center">
-        Berikut beberapa hasil tani yang sudah dipanen :
+        Kenali manfaat dan khasiat dari hasil tani yang sering dipasarkan di PaneninJualin :
       </p>
-      <v-row class="text-center" justify="center">
-        <v-col cols="12" sm="" md="3">
+      <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+      slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+        <swiper-slide v-for="(item, index) in informasiList" :key="index">
           <div class="card">
-            <v-img
-              :src="require('../assets/beras.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Beras</h4>
-            <p class="text-card">
-              Beras adalah salah satu hasil tani yang paling penting dan banyak
-              dikonsumsi di dunia.
-            </p>
+            <v-img :src="item.image" class="about-image"></v-img>
+            <h4 class="heading-card">{{ item.nama }}</h4>
+            <p class="text-card">{{ item.desc }}</p>
           </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/kopi.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Kopi</h4>
-            <p class="text-card">
-              Biji kopi adalah hasil utama yang dihasilkan dari perkebunan kopi.
-              Biji kopi yang matang dipanen dari pohon kopi dan kemudian diolah
-              melalui proses pengupasan kulit buah, fermentasi,dan pemanggangan.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/jagung.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Jagung</h4>
-            <p class="text-card">
-              jagung adalah tanaman biji-bijian yang penting dan serbaguna
-              dengan banyak kegunaan dalam makanan, pakan ternak, biofuel, dan
-              industri lainnya.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/kedelai.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Kedelai</h4>
-            <p class="text-card">
-              Kedelai adalah salah satu tanaman jenis polong-polongan yang
-              menjadi bahan dasar banyak sebuah makanan seperti susu, kecap, dan
-              tempe.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/ubi kayu.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Ubi Kayu</h4>
-            <p class="text-card">
-              Ubi kayu merupakan makanan pokok penduduk indonesia, selain itu
-              digunakan sebagai bahan baku industri dan pakan ternak.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/kentang.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Kentang</h4>
-            <p class="text-card">
-              Kentang adalah makanan yang banyak sekali zat-zat yang berguna
-              untuk meningkatkan pH di dalam tubuh manusia, Vitamin C,
-              Karbohidrat, dan gentian sebagai pengawal tenaga darah.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/jahe.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Jahe</h4>
-            <p class="text-card">
-              Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai
-              rempah-rempah dan bahan baku pengobatan tradisional. Rasa dominan
-              pedas dari jahe disebabkan oleh senyawa keton bernama Zingeron.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/kelapa.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Kelapa</h4>
-            <p class="text-card">
-              Kelapa diyakini dapat mengurangi peradangan, serta menjaga sistem
-              kekebalan tubuh. Selain itu kelapa berperan sebagai anti jamur,
-              antivirus, anti tumor.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/sagu.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Sagu</h4>
-            <p class="text-card">
-              Sagu berfungsi menyehatkan sel-sel pada usus dan paru-paru. Selain
-              itu, melancarkan peredaran dan pembuluh darah di sekitar usus dan
-              paru-paru.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/coklat.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Coklat</h4>
-            <p class="text-card">
-              Coklat bermanfaat untuk mencegah penumpukan kolestrol di dalam
-              pembuluh darah, sehingga menurunkan resiko terjadinya penyakit
-              jantung dan stroke.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/tebu.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Tebu</h4>
-            <p class="text-card">
-              Tebu mengandung berbagai macam nutrisi seperti Karbohidrat,
-              protein, mineral, vitamin, dan antioksdan. Oksidan yang terkandung
-              dalam tebu dapat membantu merawat kulit.
-            </p>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="" md="3">
-          <div class="card">
-            <v-img
-              :src="require('../assets/bawang.png')"
-              class="about-image"
-            ></v-img>
-            <h4 class="heading-card">Bawang</h4>
-            <p class="text-card">
-              Bawang merah mengandung senyawa alil sulfida yang membantu
-              mencegah penyakit jantung. Sedangkan flavonoid quercetin pada
-              bumbu masak ini, membantu menurunkan tekanan darah dan peradangan.
-            </p>
-          </div>
-        </v-col>
-      </v-row>
+        </swiper-slide>
+      <div class="swiper-pagination"></div>
+      </swiper-container>
+    </v-container>
+
+    <v-container class="heading-all heading-section" style="background-color: rgb(245, 245, 245); padding: 2rem;">
+      <div class="divider-visi mb-1"></div>
+      <h3 class="about-heading text-center">Tertarik?</h3>
+      <p class="about-subdescription text-center">
+        Temukan produk pilihan anda di fitur 
+        <span class="text-highlight">Belanjain</span>. 
+        Temukan produk menarik, checkout secara langsung tanpa harus register maupun login!
+      </p>
+      <button class="btn__">
+        <a href="/belanjain">Belanja Disini</a>
+      </button>
     </v-container>
   </div>
 </template>
@@ -222,7 +79,70 @@ export default {
   name: 'InformasiPage',
   layout: 'LandingLayout',
   data() {
-    return {}
+    return {
+      informasiList: [
+        {
+          nama: 'Beras',
+          image: require('../assets/beras.png'),
+          desc: 'Beras adalah salah satu hasil tani yang paling penting dan banyak dikonsumsi di dunia.',
+        },
+        {
+          nama: 'Kopi',
+          image: require('../assets/kopi.png'),
+          desc: 'Biji kopi adalah hasil utama yang dihasilkan dari perkebunan kopi. Biji kopi yang matang dipanen dari pohon kopi dan kemudian diolah melalui proses pengupasan kulit buah, fermentasi,dan pemanggangan.',
+        },
+        {
+          nama: 'Jagung',
+          image: require('../assets/jagung.png'),
+          desc: 'Jagung adalah tanaman biji-bijian yang penting dan serbaguna dengan banyak kegunaan dalam makanan, pakan ternak, biofuel, dan industri lainnya.',
+        },
+        {
+          nama: 'Kedelai',
+          image: require('../assets/kedelai.png'),
+          desc: 'Kedelai adalah salah satu tanaman jenis polong-polongan yang menjadi bahan dasar banyak sebuah makanan seperti susu, kecap, dan tempe.',
+        },
+        {
+          nama: 'Ubi Kayu',
+          image: require('../assets/ubi kayu.png'),
+          desc: 'Ubi kayu merupakan makanan pokok penduduk indonesia, selain itu digunakan sebagai bahan baku industri dan pakan ternak.',
+        },
+        {
+          nama: 'Kentang',
+          image: require('../assets/kentang.png'),
+          desc: 'Kentang adalah makanan yang banyak sekali zat-zat yang berguna untuk meningkatkan pH di dalam tubuh manusia, Vitamin C, Karbohidrat, dan gentian sebagai pengawal tenaga darah.',
+        },
+        {
+          nama: 'Jahe',
+          image: require('../assets/jahe.png'),
+          desc: 'Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai rempah-rempah dan bahan baku pengobatan tradisional. Rasa dominan pedas dari jahe disebabkan oleh senyawa keton bernama Zingeron.',
+        },
+        {
+          nama: 'Kelapa',
+          image: require('../assets/kelapa.png'),
+          desc: 'Kelapa diyakini dapat mengurangi peradangan, serta menjaga sistem kekebalan tubuh. Selain itu kelapa berperan sebagai anti jamur, antivirus, anti tumor.',
+        },
+        {
+          nama: 'Sagu',
+          image: require('../assets/sagu.png'),
+          desc: 'Sagu berfungsi menyehatkan sel-sel pada usus dan paru-paru. Selain itu, melancarkan peredaran dan pembuluh darah di sekitar usus dan paru-paru.',
+        },
+        {
+          nama: 'Coklat',
+          image: require('../assets/coklat.png'),
+          desc: 'Coklat bermanfaat untuk mencegah penumpukan kolestrol di dalam pembuluh darah, sehingga menurunkan resiko terjadinya penyakit jantung dan stroke.',
+        },
+        {
+          nama: 'Tebu',
+          image: require('../assets/tebu.png'),
+          desc: 'Tebu mengandung berbagai macam nutrisi seperti Karbohidrat, protein, mineral, vitamin, dan antioksdan. Oksidan yang terkandung dalam tebu dapat membantu merawat kulit.',
+        },
+        {
+          nama: 'Bawang',
+          image: require('../assets/bawang.png'),
+          desc: 'Bawang merah mengandung senyawa alil sulfida yang membantu mencegah penyakit jantung. Sedangkan flavonoid quercetin pada bumbu masak ini, membantu menurunkan tekanan darah dan peradangan.',
+        },
+      ]
+    }
   },
   head() {
     const title = 'Informasi'
@@ -290,6 +210,7 @@ export default {
   color: #1b5e20;
   line-height: 1.2;
 }
+
 .heading-section {
   text-align: center;
   margin-top: 7rem;
@@ -304,7 +225,7 @@ export default {
   text-overflow: ellipsis;
   font-size: 16px;
   line-height: 1.6;
-  color: #1b5e20;
+  color: black;
 }
 
 .about-image {
@@ -313,6 +234,7 @@ export default {
 
 .card {
   background-color: #f2f2f2;
+  max-width: 300px;
   border-radius: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -330,6 +252,7 @@ export default {
   border-radius: 50%;
   margin-bottom: 1rem;
 }
+
 .inform-image {
   border-radius: 5%;
 }
@@ -348,10 +271,12 @@ export default {
 }
 
 @media (max-width: 768px) {
+
   /* Override text-center on medium and larger devices */
   .text-xs-center {
     text-align: center !important;
   }
+
   .about-we {
     padding: 0 12px;
   }
@@ -363,7 +288,7 @@ export default {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   transition: box-shadow 0.3s ease;
 }
 
@@ -373,11 +298,54 @@ export default {
   margin-bottom: 1rem;
   color: #1b5e20;
 }
+
 .text-card {
   font-size: 16px;
   margin-bottom: 0;
   color: #1b5e20;
 }
+
+.mySwiper {
+  width: 100%;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+swiper-slide > img {
+  display: block;
+  width: 100%;
+}
+
+.text-highlight {
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #1b5e20;
+}
+
+.btn__ {
+  background-color: #4caf50;
+  padding: 7px;
+  border-radius: 5px;
+
+  transition: background-color 0.5s ease;
+}
+.btn__:hover {
+  background-color: #1b5e20;
+}
+.btn__ > a {
+  text-decoration: none;
+  color: white;
+}
+
 .v-image__image--preload {
   filter: none !important;
   transform: none !important;

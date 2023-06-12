@@ -30,8 +30,10 @@
               label="Pesan"
               outlined
             ></v-textarea>
-            <v-btn type="submit" color="primary">Kirim</v-btn>
-            <v-btn @click="dialogContact = false" color="error">Batal</v-btn>
+            <v-layout justify-end align-end row>
+              <v-btn type="submit" color="primary" class="mr-2">Kirim</v-btn>
+              <v-btn @click="dialogContact = false" color="error">Batal</v-btn>
+            </v-layout>
           </v-form>
         </v-card-text>
       </v-card>
