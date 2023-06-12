@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <v-layout align-center justify-center column>
-      <span class="animate__animated animate__backInDown text-green darken-2" style="font-size: 3rem; font-weight: 600;">Terima Kasih!</span>
-      <span>sudah menggunakan PaneninJualin sebagai platform jual beli hasil tani!. Sampai bertemu di pemesanan berikutnya!</span>
+      <span class="animate__animated animate__backInDown text-green darken-2 thankyou" style="font-size: 3rem; font-weight: 600; color: #1b5e20">Terima Kasih!</span>
+      <span class="subtext">sudah menggunakan PaneninJualin sebagai platform jual beli hasil tani!. Sampai bertemu di pemesanan berikutnya!</span>
       <span>
         <a href="/" style="text-decoration: none; color: rgb(47, 47, 231)">Kembali ke Home</a>
       </span>
@@ -98,6 +98,12 @@ export default {
 
 <style scoped>
 .container {
-  padding: 100px;
+  padding: 100px 20px;
+}
+
+@media (max-width: 600px) {
+  .thankyou, .subtext {
+    text-align: center;
+  }
 }
 </style>

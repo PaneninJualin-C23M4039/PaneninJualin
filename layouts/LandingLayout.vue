@@ -40,9 +40,9 @@
     </v-dialog>
 
     <v-app-bar max-height="64" class="white" elevation="4" fixed>
-      <v-toolbar-title class="mr-6" style="color: #1b5e20; font-weight: 800"
-        >PaneninJualin</v-toolbar-title
-      >
+      <v-toolbar-title class="mr-6" style="">
+        <nuxt-link to="/" style="color: #1b5e20; font-weight: 800; text-decoration: none;">PaneninJualin</nuxt-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-md-and-up">
         <v-btn icon @click.stop="toggleMenu = !toggleMenu">
