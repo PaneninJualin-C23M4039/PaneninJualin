@@ -66,16 +66,13 @@ export default {
           src: '/icon.png',
           sizes: '512x512',
           type: 'image/png',
-          purpose: 'any maskable'
-        }
-      ]
-    },
-    meta: {
-      theme_color: '#ffffff'
+          purpose: 'any maskable',
+        },
+      ],
     },
     workbox: {
       dev: false,
-    }
+    },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
