@@ -4,7 +4,7 @@
       <span class="animate__animated animate__backInDown text-green darken-2" style="font-size: 3rem; font-weight: 600;">Terima Kasih!</span>
       <span>sudah menggunakan PaneninJualin sebagai platform jual beli hasil tani!. Sampai bertemu di pemesanan berikutnya!</span>
       <span>
-        <a href="/">Kembali ke Home</a>
+        <a href="/" style="text-decoration: none; color: rgb(47, 47, 231)">Kembali ke Home</a>
       </span>
     </v-layout>
   </div>
@@ -23,8 +23,21 @@ export default {
     }
   },
 
+  methods: {
+    randomOrderId() {
+      const num = '0123456789'
+      let result = ''
+      for (let i = 0; i < 10; i++) {
+        const randomIndex = Math.floor(Math.random() * num.length)
+        result += num[randomIndex]
+      } 
+
+      return result
+    }
+  },
+
   created() {
-    const orderId = Math.floor(Math.random() * 10) + 1
+    const orderId = this.randomOrderId()
     const itemsCart = JSON.parse(localStorage.getItem('keranjang'))
 
     if (itemsCart && itemsCart.length > 0) {
@@ -39,7 +52,7 @@ export default {
         watermark: { text: '© PaneninJualin ©', color: 'green', opacity: 0.3, bold: false, italics: true },
         content: [
           { text: 'Keranjang Belanja', style: 'header' },
-          { text: 'Berikut adalah hasil cetak checkout dari keranjang belanja anda.', margin: [0, 10] },
+          { text: 'Berikut adalah hasil cetak checkout dari keranjang belanja anda.', margin: [0, 40, 0, 0] },
           {
             table: {
               headerRows: 1,

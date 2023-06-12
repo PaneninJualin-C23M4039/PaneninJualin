@@ -1,8 +1,11 @@
 <template>
   <div class="container">
-    <v-layout align-center justify-center>
+    <v-layout align-center justify-center column>
       <span class="title__" v-if="error.statusCode === 404">404 not found</span>
       <span class="title__" v-else>An Error Occurred</span>
+      <span class="mt-5">
+        <a href="/" style="text-decoration: none; color: rgb(47, 47, 231)">Kembali ke Home</a>
+      </span>
     </v-layout>
   </div>
 </template>

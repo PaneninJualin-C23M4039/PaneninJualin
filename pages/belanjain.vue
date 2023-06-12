@@ -109,6 +109,23 @@
         </v-pagination>
       </v-col>
     </v-row>
+    <v-row class="belanjain__content">
+      <v-col cols="12" class="text-center">
+        <div class="divider"></div>
+        <span class="text-title">Ingin Menjual Seperti Mereka?</span>
+      </v-col>
+      <v-col cols="12" class="text-center">
+        <span>Mari menjual bersama kami di fitur 
+          <span class="text-highlight">Jualin!</span>
+          oleh PaneninJualin. Anda hanya perlu untuk mengisi form untuk barang yang ingin anda jual!</span>
+      </v-col>
+      <v-col cols="12" class="text-center mt-3">
+        <button class="btn__">
+          <a href="/jualin">Jual Disini!</a>
+        </button>
+      </v-col>
+    </v-row>
+
 
     <!-- Dialog dan Button dengan Model -->
 
@@ -334,8 +351,12 @@ export default {
   },
 
   created() {
-    onValue(dbRef(db, 'barang'), (snapshot) => {
-      ;(this.items = []),
+    if (!navigator.onLine) {
+      this.setSnackbar(true, 'Koneksi Internet Tidak Tersedia', 'red')
+    } else {
+      this.setSnackbar(true, 'Mengambil Data...', 'orange darken-2')
+      onValue(dbRef(db, 'barang'), (snapshot) => {
+        this.items = []
         snapshot.forEach((item) => {
           this.items.push({
             id: item.key,
@@ -349,13 +370,9 @@ export default {
             expanded: false,
           })
         })
-    })
-
-    if (this.items.length) {
-      this.setSnackbar(true, 'Berhasil Mendapatkan Data', 'green')
-    } else {
-      this.setSnackbar(true, 'Gagal Mendapatkan Data', 'red')
+      })
     }
+    
   },
 
   head() {
@@ -366,6 +383,20 @@ export default {
 </script>
 
 <style scoped>
+.btn__ {
+  background-color: #4caf50;
+  padding: 7px;
+  border-radius: 5px;
+
+  transition: background-color 0.5s ease;
+}
+.btn__:hover {
+  background-color: #1b5e20;
+}
+.btn__ > a {
+  text-decoration: none;
+  color: white;
+}
 .circled {
   font-weight: 800;
 }
@@ -387,6 +418,7 @@ export default {
 .text-highlight {
   color: #ffffff;
   padding: 5px;
+  border-radius: 5px;
   background-color: #1b5e20;
 }
 
@@ -394,7 +426,13 @@ export default {
   height: 2px;
   width: 12rem;
   margin: 0 auto 0;
-  background-color: #1b5e20;
+  background-color: #36be3f;
+}
+
+.belanjain__content {
+  margin-top: 7rem;
+  padding: 3rem 6rem;
+  background-color: rgb(245, 245, 245);
 }
 
 @media (max-width: 1000px) {
