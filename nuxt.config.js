@@ -58,10 +58,23 @@ export default {
     manifest: {
       name: 'PaneninJualin',
       lang: 'id',
+      start_url: '/',
       theme_color: '#ffffff',
+      background_color: '#ffffff',
+      icons: [
+        {
+          src: '/icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable'
+        }
+      ]
     },
     meta: {
       theme_color: '#ffffff'
+    },
+    workbox: {
+      dev: false,
     }
   },
 
