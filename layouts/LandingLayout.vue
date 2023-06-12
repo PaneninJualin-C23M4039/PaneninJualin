@@ -81,7 +81,7 @@
       right
     >
       <template v-slot:activator="{ on }">
-        <v-btn v-on="on" icon>
+        <v-btn v-on="on" icon aria-label="Toggle Menu">
           <v-icon>mdi-menu</v-icon>
         </v-btn>
       </template>
@@ -115,6 +115,7 @@
             icon
             href="https://github.com/orgs/PaneninJualin-C23M4039"
             target="_blank"
+            aria-label="Github"
           >
             <v-icon size="30px"> mdi-github </v-icon>
           </v-btn>
@@ -147,6 +148,7 @@
             icon
             href="/"
             target="_blank"
+            :aria-label="item.label"
           >
             <v-icon size="30px">{{ item.icon }}</v-icon>
           </v-btn>
@@ -176,10 +178,10 @@ export default {
         { name: 'Tentang Kami', to: '/tentangKami' },
       ],
       sosmedList: [
-        { icon: 'mdi-facebook' },
-        { icon: 'mdi-instagram' },
-        { icon: 'mdi-whatsapp' },
-        { icon: 'mdi-twitter' },
+        { icon: 'mdi-facebook', label: 'facebook' },
+        { icon: 'mdi-instagram', label: 'instagram' },
+        { icon: 'mdi-whatsapp', label: 'whatsapp' },
+        { icon: 'mdi-twitter', label: 'twitter' },
       ],
       dialogContact: false,
       toggleMenu: false,

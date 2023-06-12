@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Temukan berbagai produk hasil tani segar dan berkualitas di aplikasi jual beli hasil tani. Belanja langsung dari petani lokal dan dukung pertanian berkelanjutan.' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
@@ -58,7 +58,11 @@ export default {
     manifest: {
       name: 'PaneninJualin',
       lang: 'id',
+      theme_color: '#ffffff',
     },
+    meta: {
+      theme_color: '#ffffff'
+    }
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
