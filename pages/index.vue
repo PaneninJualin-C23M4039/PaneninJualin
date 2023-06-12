@@ -119,7 +119,7 @@
           <p class="landing-description">
             Ciptakan kesejahteraan petani untuk hidup yang lebih baik
           </p>
-          <v-btn color="#76FF03" to="/informasi" class="custom-button"
+          <v-btn color="#76FF03" to="/belanjain" class="custom-button"
             >Beli Sekarang!</v-btn
           >
         </v-col>

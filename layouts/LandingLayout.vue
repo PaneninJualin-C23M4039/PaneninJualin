@@ -123,7 +123,7 @@
           efisien. Aplikasi ini memungkinkan petani untuk menjual produk
           pertanian mereka secara langsung kepada konsumen atau pembeli
           potensial melalui platform online. Dengan fitur-fitur seperti
-          'Jualin', dan 'Informasi', PaneninJualin memberikan kemudahan bagi
+          'Jualin', 'Belanjain', dan 'Informasi', PaneninJualin memberikan kemudahan bagi
           petani untuk meningkatkan akses pasar dan meningkatkan pendapatan
           mereka. Dengan demikian, aplikasi ini dapat membantu untuk memperkuat
           rantai pasok pertanian dan mendukung pertumbuhan ekonomi petani.
