@@ -86,7 +86,7 @@ export default {
       }
 
       const pdfDocGen = pdfMake.createPdf(documentDefinition)
-      pdfDocGen.download(`Keranjang_Belanja_${orderId}.pdf`)
+      pdfDocGen.download(`KeranjangBelanja_${orderId}.pdf`)
     } else {
       console.log('cek disini kalau localstorage ga kebawa')
     }

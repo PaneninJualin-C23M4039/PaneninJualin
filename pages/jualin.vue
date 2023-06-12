@@ -146,15 +146,6 @@
                 ></v-text-field>
               </v-col>
               <v-col cols="12" sm="6" md="6">
-                <v-text-field
-                  filled
-                  label="Nama Barang"
-                  v-model="formBarang.namaBarang"
-                  placeholder="Jeruk 1kg"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" sm="6" md="6">
                 <v-select
                   filled
                   label="Jenis"
@@ -162,6 +153,15 @@
                   :items="jenisList"
                   required
                 ></v-select>
+              </v-col>
+              <v-col cols="12" sm="6" md="6">
+                <v-text-field
+                  filled
+                  label="Nama Barang"
+                  v-model="formBarang.namaBarang"
+                  placeholder="Jeruk 1kg"
+                  required
+                ></v-text-field>
               </v-col>
               <v-col cols="12" sm="6" md="6">
                 <v-text-field

@@ -68,7 +68,7 @@
         Temukan produk menarik, checkout secara langsung tanpa harus register maupun login!
       </p>
       <button class="btn__">
-        <a href="/belanjain">Belanja Disini</a>
+        <nuxt-link to="/belanjain">Belanja Disini</nuxt-link>
       </button>
     </v-container>
   </div>

@@ -120,27 +120,32 @@ export default {
 .heading-all {
   margin-top: 7rem;
 }
+
 .divider-visi {
   height: 2px;
   width: 10.5rem;
   background-color: #36be3f;
   margin: 0 auto 0px;
 }
+
 .divider-about {
   height: 2px;
   width: 17.5rem;
   background-color: #36be3f;
   margin: 0 auto 0px;
 }
+
 .divider-team {
   height: 2px;
   width: 11.5rem;
   background-color: #36be3f;
   margin: 0 auto 0px;
 }
+
 .about-section {
   padding: 100px 0;
 }
+
 .about-we {
   background-color: rgb(245, 245, 245);
   padding: 0 6rem;
@@ -152,6 +157,7 @@ export default {
   margin-bottom: 20px;
   color: #1b5e20;
 }
+
 .about-subheading {
   color: #36833b;
 }
@@ -163,6 +169,7 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .about-description {
   font-size: 16px;
   line-height: 1.6;
@@ -177,20 +184,25 @@ export default {
 .about-image {
   max-width: 100%;
 }
+
 @media (max-width: 600px) {
+
   /* Override text-center on medium and larger devices */
   .text-xs-center {
     text-align: center !important;
   }
+
   .about-we {
     padding: 0 12px;
   }
+
   .card {
     margin: 0 auto;
     margin-bottom: 20px;
     max-width: 300px;
   }
 }
+
 .card {
   background-color: rgb(255, 255, 255);
   color: rgba(0, 0, 0, 0.87);
@@ -201,6 +213,7 @@ export default {
   overflow: hidden;
   max-width: 355px;
 }
+
 .heading-card {
   padding: 14px;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -209,6 +222,7 @@ export default {
   line-height: 1.334;
   letter-spacing: 0em;
 }
+
 .text-card {
   padding: 0 14px;
   font-family: Roboto, Helvetica, Arial, sans-serif;

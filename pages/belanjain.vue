@@ -121,7 +121,7 @@
       </v-col>
       <v-col cols="12" class="text-center mt-3">
         <button class="btn__">
-          <a href="/jualin">Jual Disini!</a>
+          <nuxt-link to="/jualin">Jual Disini</nuxt-link>
         </button>
       </v-col>
     </v-row>

@@ -18,16 +18,19 @@
             <v-text-field
               v-model="form.name"
               label="Nama"
+              placeholder="Sumar Kencana"
               outlined
             ></v-text-field>
             <v-text-field
               v-model="form.email"
               label="Email"
+              placeholder="sumarkencana@gmail.com"
               outlined
             ></v-text-field>
             <v-textarea
               v-model="form.message"
               label="Pesan"
+              placeholder="Keren banget websitenya bang!"
               outlined
             ></v-textarea>
             <v-layout justify-end align-end row>
@@ -189,7 +192,11 @@ export default {
   },
   methods: {
     submitForm() {
-      const mailToLink = `mailto:satyogag@gmail.com?subject=Form Submission&body=Name: ${this.form.name}%20Email: ${this.form.email}%21%0 ${this.form.message}`
+      const mailToLink = `mailto:satyogag@gmail.com?subject=Form Submission&body=
+      Name: ${encodeURIComponent(this.form.name)}%0D%0A
+      Email: ${encodeURIComponent(this.form.email)}%0D%0A%0D
+      
+      Message: ${encodeURIComponent(this.form.message)}%0D%0A`
       window.location.href = mailToLink
       this.dialogContact = false
     },
