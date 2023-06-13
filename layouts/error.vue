@@ -4,7 +4,7 @@
       <span class="title__" v-if="error.statusCode === 404">404 not found</span>
       <span class="title__" v-else>An Error Occurred</span>
       <span class="mt-5">
-        <a href="/" style="text-decoration: none; color: rgb(47, 47, 231)">Kembali ke Home</a>
+        <nuxt-link style="text-decoration: none; color: rgb(47, 47, 231)" to="/">Kembali ke Home</nuxt-link>
       </span>
     </v-layout>
   </div>

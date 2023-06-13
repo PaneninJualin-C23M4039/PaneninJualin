@@ -283,7 +283,7 @@ export default {
         jenis: '',
         harga: '',
         deskripsi: '',
-        gambar: null,
+        gambar: [],
       },
       snackbarAttr: { value: false, message: '', color: '' },
     }
@@ -303,6 +303,12 @@ export default {
 
         const formDataRef = dbref(db, 'barang')
         await push(formDataRef, this.formBarang)
+
+        setTimeout(() => {
+          this.$router.push({
+            path: '/belanjain'
+          })
+        }, 4000)
 
         this.setSnackbar(true, 'Berhasil Input Data', 'green')
       } catch (error) {
