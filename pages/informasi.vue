@@ -264,12 +264,6 @@ export default {
   color: #1b5e20;
 }
 
-.text-card {
-  font-size: 16px;
-  margin-bottom: 0;
-  color: #1b5e20;
-}
-
 @media (max-width: 768px) {
 
   /* Override text-center on medium and larger devices */
@@ -302,7 +296,6 @@ export default {
 .text-card {
   font-size: 16px;
   margin-bottom: 0;
-  color: #1b5e20;
 }
 
 .mySwiper {

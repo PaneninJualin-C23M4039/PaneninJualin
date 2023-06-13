@@ -57,6 +57,7 @@ export default {
   pwa: {
     manifest: {
       name: 'PaneninJualin',
+      short_name: 'PaJe',
       lang: 'id',
       start_url: '/',
       theme_color: '#ffffff',

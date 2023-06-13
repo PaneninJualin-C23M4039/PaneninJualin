@@ -60,6 +60,28 @@
     </v-container>
     <v-container class="heading-all">
       <div class="divider-team"></div>
+      <h3 class="about-heading text-center">Fitur Kami</h3>
+      <v-row class="text-center mt-2" gutter="4">
+        <v-col cols="12" lg="3" md="6" sm="6" class="oval">
+          <v-icon color="green darken-2">mdi-cash-multiple</v-icon>
+          Jual Hasil Tani
+        </v-col>
+        <v-col cols="12" lg="3" md="6" sm="6" class="oval">
+          <v-icon color="green darken-2">mdi-cart</v-icon>
+          Beli Hasil Tani
+        </v-col>
+        <v-col cols="12" lg="3" md="6" sm="6" class="oval">
+          <v-icon color="green darken-2">mdi-information</v-icon>
+          Informasi Pertanian
+        </v-col>
+        <v-col cols="12" lg="3" md="6" sm="6" class="oval">
+          <v-icon color="green darken-2">mdi-phone</v-icon>
+          Kontak Langsung
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container class="heading-all">
+      <div class="divider-team"></div>
       <h3 class="about-heading text-center">Team Kami</h3>
       <v-row align="center">
         <v-col cols="12" md="3">
@@ -117,6 +139,11 @@ export default {
 }
 </script>
 <style scoped>
+.oval {
+  border-radius: 100px;
+  border: 2px solid #1b5e20;
+  font-weight: 600;
+}
 .heading-all {
   margin-top: 7rem;
 }
