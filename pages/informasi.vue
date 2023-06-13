@@ -3,7 +3,7 @@
     <v-container fluid class="about-we">
       <v-row align="center">
         <v-col cols="12" md="8" class="text-xs-center">
-          <h2 class="about-heading">Informasi Seputar Hasil Tani</h2>
+          <h2 class="about-heading animate__animated animate__backInDown">Informasi Seputar Hasil Tani</h2>
           <p class="about-description">
             Hasil tani, sumber kehidupan kita. Biarkan informasi memperkaya
             pengetahuanmu tentang keajaiban alam yang melimpah di ladang dan
@@ -19,7 +19,7 @@
 
     <v-container class="heading-all">
       <div class="divider-visi mb-1"></div>
-      <h3 class="about-heading text-center">Manfaat & Tujuan</h3>
+      <h3 class="about-heading text-center animate__animated animate__backInLeft">Manfaat & Tujuan</h3>
       <v-row class="text-center">
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Manfaat</h3>
@@ -41,7 +41,7 @@
 
     <v-container class="heading-all heading-section">
       <div class="divider-visi mb-1"></div>
-      <h3 class="about-heading text-center">Hasil Tani</h3>
+      <h3 class="about-heading text-center animate__animated animate__backInRight">Hasil Tani</h3>
       <p class="about-subdescription text-center">
         Kenali manfaat dan khasiat dari hasil tani yang sering dipasarkan di PaneninJualin :
       </p>
@@ -61,7 +61,7 @@
 
     <v-container class="heading-all heading-section" style="background-color: rgb(245, 245, 245); padding: 2rem;">
       <div class="divider-visi mb-1"></div>
-      <h3 class="about-heading text-center">Tertarik?</h3>
+      <h3 class="about-heading text-center animate__animated animate__backInUp">Tertarik?</h3>
       <p class="about-subdescription text-center">
         Temukan produk pilihan anda di fitur 
         <span class="text-highlight">Belanjain</span>. 

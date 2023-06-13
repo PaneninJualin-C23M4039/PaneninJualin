@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="container container__item-list">
-    <h3 class="text-center text-title">
+    <h3 class="text-center text-title animate__animated animate__backInDown">
       <span class="text-highlight">Belanjain</span>
       di PaneninJualin
     </h3>
@@ -112,7 +112,7 @@
     <v-row class="belanjain__content">
       <v-col cols="12" class="text-center">
         <div class="divider"></div>
-        <span class="text-title">Ingin Menjual Seperti Mereka?</span>
+        <span class="text-title animate__animated animate__backInUp">Ingin Menjual Seperti Mereka?</span>
       </v-col>
       <v-col cols="12" class="text-center">
         <span>Mari menjual bersama kami di fitur 
@@ -340,7 +340,7 @@ export default {
         this.$router.push({
           path: '/generatePdf',
         })
-      }, 5000)
+      }, 3000)
     },
 
     setSnackbar(val, msg, color) {

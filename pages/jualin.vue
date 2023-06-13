@@ -3,7 +3,7 @@
     <v-container fluid class="about-we">
       <v-row align="center">
         <v-col cols="12" md="8" class="text-xs-center">
-          <h2 class="about-heading">
+          <h2 class="about-heading animate__animated animate__backInDown">
             <span class="highlight-text">Jualin</span>
             di PaneninJualin
           </h2>
@@ -29,7 +29,7 @@
     <section id="readme">
       <v-container class="heading-all bg-gray-padding">
         <div class="divider-visi"></div>
-        <h3 class="about-heading text-center">Tata & Cara</h3>
+        <h3 class="about-heading text-center animate__animated animate__backInLeft">Tata & Cara</h3>
         <v-row class="text-center">
           <v-col cols="12" md="12">
             <p>
@@ -63,7 +63,7 @@
 
     <v-container class="heading-all">
       <div class="divider-about"></div>
-      <h3 class="about-heading text-center">Apa Saja Yang Perlu Disiapkan?</h3>
+      <h3 class="about-heading text-center animate__animated animate__backInRight">Apa Saja Yang Perlu Disiapkan?</h3>
       <v-row class="text-center">
         <v-col cols="12" md="12">
           <p class="about-subdescription">
@@ -114,7 +114,7 @@
 
     <v-container class="heading-all bg-gray-padding">
       <div class="divider-team"></div>
-      <h3 class="about-heading text-center">Jualin Sekarang!</h3>
+      <h3 class="about-heading text-center animate__animated animate__backInUp">Jualin Sekarang!</h3>
       <v-row class="text-center">
         <v-col cols="12" md="12">
           <p class="subtitle-">
@@ -224,7 +224,7 @@
     <v-snackbar
       v-model="snackbarAttr.value"
       :color="snackbarAttr.color"
-      timeout="3000"
+      timeout="5000"
     >
       {{ snackbarAttr.message }}
     </v-snackbar>
@@ -304,13 +304,14 @@ export default {
         const formDataRef = dbref(db, 'barang')
         await push(formDataRef, this.formBarang)
 
+        this.setSnackbar(true, 'Berhasil Input Data, Memindahkan Halaman...', 'orange darken-2')
+
         setTimeout(() => {
           this.$router.push({
             path: '/belanjain'
           })
-        }, 4000)
+        }, 3000)
 
-        this.setSnackbar(true, 'Berhasil Input Data', 'green')
       } catch (error) {
         this.setSnackbar(true, `Gagal Input Data: ${error}`, 'red')
       }
