@@ -218,7 +218,6 @@ export default {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #1b5e20;
 }
 
 .divider-visi {
@@ -259,7 +258,6 @@ export default {
   text-overflow: ellipsis;
   font-size: 16px;
   line-height: 1.6;
-  color: #1b5e20;
 }
 
 .about-image {
@@ -301,7 +299,6 @@ export default {
 .text-card {
   font-size: 16px;
   margin-bottom: 0;
-  color: #1b5e20;
 }
 
 .landing-image {
