@@ -151,7 +151,7 @@
           <v-row>
             <v-col cols="12" v-for="(item, index) in itemsCart" :key="index">
               <v-card outlined shaped color="green darken-2">
-                <v-img :src="item.gambar" height="150px"></v-img>
+                <nuxt-img :src="item.gambar" height="150px" loading="lazy"></nuxt-img>
                 <v-card-title>
                   <span style="color: white">{{ item.namaBarang }}</span>
                 </v-card-title>

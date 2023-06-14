@@ -42,9 +42,11 @@ export default {
 
     if (itemsCart && itemsCart.length > 0) {
       const tableRows = []
+      let totalBelanja = 0
 
       itemsCart.forEach((item) => {
         const row = [item.namaBarang, item.harga, item.jenis, item.namaPenjual]
+        totalBelanja += parseInt(item.harga)
         tableRows.push(row)
       })
 
@@ -63,6 +65,7 @@ export default {
               ],
             },
           },
+          { text: `Total Belanja: Rp${totalBelanja}`, bold: true, alignment: 'left', margin: [0, 10, 40, 0] },
           { text: 'Transfer QRIS melalui barcode dibawah.', style: 'textTransfer' },
           { qr: 'PaneninJualin Dummy QRCode', fit: '160', style: 'alignLeft' },
           { text: 'Terima kasih sudah mempercayai platform PaneninJualin, sampai bertemu di pemesanan berikutnya!', alignment: 'center', margin: [0, 40] }
