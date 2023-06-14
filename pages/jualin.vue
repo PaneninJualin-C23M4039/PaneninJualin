@@ -181,7 +181,6 @@ import {
   uploadBytes,
   getDownloadURL,
 } from 'firebase/storage'
-import ImageCompressor from 'image-compressor'
 
 export default {
   name: 'JualinPage',
