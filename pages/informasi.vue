@@ -11,7 +11,7 @@
           </p>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img :src="require('../assets/info1.png')" class="about-image">
+          <v-img :src="require('../assets/info1-min.png')" class="about-image">
           </v-img>
         </v-col>
       </v-row>
@@ -88,42 +88,42 @@ export default {
         },
         {
           nama: 'Kopi',
-          image: require('../assets/kopi.png'),
+          image: require('../assets/kopi-min.png'),
           desc: 'Biji kopi adalah hasil utama yang dihasilkan dari perkebunan kopi. Biji kopi yang matang dipanen dari pohon kopi dan kemudian diolah melalui proses pengupasan kulit buah, fermentasi,dan pemanggangan.',
         },
         {
           nama: 'Jagung',
-          image: require('../assets/jagung.png'),
+          image: require('../assets/jagung-min.png'),
           desc: 'Jagung adalah tanaman biji-bijian yang penting dan serbaguna dengan banyak kegunaan dalam makanan, pakan ternak, biofuel, dan industri lainnya.',
         },
         {
           nama: 'Kedelai',
-          image: require('../assets/kedelai.png'),
+          image: require('../assets/kedelai-min.png'),
           desc: 'Kedelai adalah salah satu tanaman jenis polong-polongan yang menjadi bahan dasar banyak sebuah makanan seperti susu, kecap, dan tempe.',
         },
         {
           nama: 'Ubi Kayu',
-          image: require('../assets/ubi kayu.png'),
+          image: require('../assets/ubi kayu-min.png'),
           desc: 'Ubi kayu merupakan makanan pokok penduduk indonesia, selain itu digunakan sebagai bahan baku industri dan pakan ternak.',
         },
         {
           nama: 'Kentang',
-          image: require('../assets/kentang.png'),
+          image: require('../assets/kentang-min.png'),
           desc: 'Kentang adalah makanan yang banyak sekali zat-zat yang berguna untuk meningkatkan pH di dalam tubuh manusia, Vitamin C, Karbohidrat, dan gentian sebagai pengawal tenaga darah.',
         },
         {
           nama: 'Jahe',
-          image: require('../assets/jahe.png'),
+          image: require('../assets/jahe-min.png'),
           desc: 'Jahe adalah tumbuhan yang rimpangnya sering digunakan sebagai rempah-rempah dan bahan baku pengobatan tradisional. Rasa dominan pedas dari jahe disebabkan oleh senyawa keton bernama Zingeron.',
         },
         {
           nama: 'Kelapa',
-          image: require('../assets/kelapa.png'),
+          image: require('../assets/kelapa-min.png'),
           desc: 'Kelapa diyakini dapat mengurangi peradangan, serta menjaga sistem kekebalan tubuh. Selain itu kelapa berperan sebagai anti jamur, antivirus, anti tumor.',
         },
         {
           nama: 'Sagu',
-          image: require('../assets/sagu.png'),
+          image: require('../assets/sagu-min.png'),
           desc: 'Sagu berfungsi menyehatkan sel-sel pada usus dan paru-paru. Selain itu, melancarkan peredaran dan pembuluh darah di sekitar usus dan paru-paru.',
         },
         {
@@ -133,7 +133,7 @@ export default {
         },
         {
           nama: 'Tebu',
-          image: require('../assets/tebu.png'),
+          image: require('../assets/tebu-min.png'),
           desc: 'Tebu mengandung berbagai macam nutrisi seperti Karbohidrat, protein, mineral, vitamin, dan antioksdan. Oksidan yang terkandung dalam tebu dapat membantu merawat kulit.',
         },
         {

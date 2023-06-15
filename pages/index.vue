@@ -14,7 +14,7 @@
         </v-col>
         <v-col cols="12" md="6" class="order-1 order-md-2">
           <v-img
-            :src="require('../assets/landing-page-1.png')"
+            :src="require('../assets/landing-page-1-min.png')"
             class="landing-image"
           ></v-img>
         </v-col>
@@ -31,7 +31,7 @@
         <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
-              :src="require('../assets/layanan1.png')"
+              :src="require('../assets/layanan1-min.png')"
               class="about-image"
             ></v-img>
             <h4 class="heading-card">Katalog Produk</h4>
@@ -44,7 +44,7 @@
         <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
-              :src="require('../assets/layanan2.png')"
+              :src="require('../assets/layanan2-min.png')"
               class="about-image"
             ></v-img>
             <h4 class="heading-card">Informasi Nutrisi</h4>
@@ -57,7 +57,7 @@
         <v-col cols="12" sm="" md="3">
           <div class="card">
             <v-img
-              :src="require('../assets/layanan3.png')"
+              :src="require('../assets/layanan3-min.png')"
               class="about-image"
             ></v-img>
             <h4 class="heading-card">Transfer</h4>
@@ -143,7 +143,7 @@
         </v-col>
         <v-col cols="12" md="6" class="order-1 order-md-2">
           <v-img
-            :src="require('../assets/landing2.png')"
+            :src="require('../assets/landing2-min.png')"
             class="landing-image"
           ></v-img>
         </v-col>

@@ -17,7 +17,7 @@
           </p>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img :src="require('../assets/logo.png')" class="about-image">
+          <v-img :src="require('../assets/logo-min.png')" class="about-image">
           </v-img>
         </v-col>
       </v-row>
@@ -86,7 +86,7 @@
       <v-row align="center">
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar1.png')" class="about-image">
+            <v-img :src="require('../assets/avatar1-min.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Syaloommuel Sirait</h4>
             <p class="text-card">Universitas Medan Area | F043XB061</p>
@@ -94,7 +94,7 @@
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar2.png')" class="about-image">
+            <v-img :src="require('../assets/avatar2-min.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Satyo Gusti Anugrah</h4>
             <p class="text-card">
@@ -104,7 +104,7 @@
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar3.png')" class="about-image">
+            <v-img :src="require('../assets/avatar3-min.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Azzam Ghufron Nasution</h4>
             <p class="text-card">Universitas Malikussaleh | F016XB056</p>
@@ -112,7 +112,7 @@
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar2.png')" class="about-image">
+            <v-img :src="require('../assets/avatar2-min.png')" class="about-image">
             </v-img>
             <h4 class="heading-card">Mohammad Hoki Rezky</h4>
             <p class="text-card">
