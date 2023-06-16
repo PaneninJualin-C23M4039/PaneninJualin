@@ -117,7 +117,7 @@
         Berikut merupakan Beberapa artikel penting terkait Bertani
       </p>
       <v-expansion-panels>
-        <v-expansion-panel v-for="(article, index) in articles" :key="index">
+        <v-expansion-panel v-for="(article, index) in articles" :key="index" aria-label="farm articles">
           <v-expansion-panel-header class="article-title">{{
             article.title
           }}</v-expansion-panel-header>
