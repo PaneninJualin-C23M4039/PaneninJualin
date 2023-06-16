@@ -2,6 +2,8 @@
 
 > Platform Jual Beli Hasil Tani.
 
+![](preview.png)
+
 <p> PaneninJualin adalah aplikasi berbasis website yang bertujuan untuk memberdayakan petani dengan cara membantu mereka mendistribusikan hasil taninya secara langsung ke konsumen tanpa melalui pihak distributor. Melalui platform ini, petani dapat memasarkan produk-produk mereka, berinteraksi langsung dengan pelanggan, dan meningkatkan pendapatan mereka. <p>
 
 ## Tech Stack
