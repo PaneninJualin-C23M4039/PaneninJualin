@@ -20,7 +20,7 @@
           </v-chip>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img :src="require('../assets/farmer.svg')" class="about-image">
+          <v-img :src="require('../assets/farmer.svg')" class="about-image lazyload">
           </v-img>
         </v-col>
       </v-row>

@@ -11,7 +11,7 @@
           </p>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img :src="require('../assets/info1-min.png')" class="about-image">
+          <v-img :src="require('../assets/info1-min.png')" class="about-image lazyload">
           </v-img>
         </v-col>
       </v-row>
@@ -50,7 +50,7 @@
       coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
         <swiper-slide v-for="(item, index) in informasiList" :key="index">
           <div class="card">
-            <v-img :src="item.image" class="about-image"></v-img>
+            <v-img :src="item.image" class="about-image lazyload"></v-img>
             <h4 class="heading-card">{{ item.nama }}</h4>
             <p class="text-card">{{ item.desc }}</p>
           </div>

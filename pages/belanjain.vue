@@ -32,7 +32,7 @@
         :key="item.id"
       >
         <v-card class="mx-auto" max-width="344" elevation="3">
-          <v-img :src="item.gambar" height="200px"></v-img>
+          <v-img :src="item.gambar" height="200px" class="lazyload"></v-img>
           <v-card-title class="font-weight-medium">{{
             item.namaBarang
           }}</v-card-title>
@@ -151,7 +151,7 @@
           <v-row>
             <v-col cols="12" v-for="(item, index) in itemsCart" :key="index">
               <v-card outlined shaped color="green darken-2">
-                <v-img :src="item.gambar" height="150px" loading="lazy"></v-img>
+                <v-img :src="item.gambar" height="150px" class="lazyload"></v-img>
                 <v-card-title>
                   <span style="color: white">{{ item.namaBarang }}</span>
                 </v-card-title>
