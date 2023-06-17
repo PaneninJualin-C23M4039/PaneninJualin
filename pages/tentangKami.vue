@@ -3,7 +3,9 @@
     <v-container fluid class="about-we">
       <v-row align="center">
         <v-col cols="12" md="8" class="text-xs-center">
-          <h2 class="about-heading animate__animated animate__backInDown">Tentang Kami</h2>
+          <h2 class="about-heading animate__animated animate__backInDown">
+            Tentang Kami
+          </h2>
           <p class="about-description">
             PaneninJualin adalah sebuah aplikasi yang didesain khusus untuk
             membantu petani dalam mendistribusikan hasil panen mereka dengan
@@ -17,7 +19,10 @@
           </p>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img :src="require('../assets/logo-min.png')" class="about-image lazyload">
+          <v-img
+            :src="require('../assets/logo-min.png')"
+            class="about-image lazyload"
+          >
           </v-img>
         </v-col>
       </v-row>
@@ -25,7 +30,11 @@
 
     <v-container class="heading-all">
       <div class="divider-visi"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInLeft">Visi & Misi</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInLeft"
+      >
+        Visi & Misi
+      </h3>
       <v-row class="text-center">
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Visi</h3>
@@ -45,7 +54,11 @@
     </v-container>
     <v-container class="heading-all">
       <div class="divider-about"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInRight">Tentang Aplikasi</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInRight"
+      >
+        Tentang Aplikasi
+      </h3>
       <v-row class="text-center">
         <v-col cols="12" md="12">
           <p class="about-subdescription">
@@ -60,7 +73,11 @@
     </v-container>
     <v-container class="heading-all">
       <div class="divider-team"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInLeft">Fitur Kami</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInLeft"
+      >
+        Fitur Kami
+      </h3>
       <v-row class="text-center mt-2" gutter="4">
         <v-col cols="12" lg="3" md="6" sm="6" class="oval">
           <v-icon color="green darken-2">mdi-cash-multiple</v-icon>
@@ -82,11 +99,16 @@
     </v-container>
     <v-container class="heading-all">
       <div class="divider-team"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInUp">Team Kami</h3>
+      <h3 class="about-heading text-center animate__animated animate__backInUp">
+        Team Kami
+      </h3>
       <v-row align="center">
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar1-min.png')" class="about-image lazyload">
+            <v-img
+              :src="require('../assets/avatar1-min.png')"
+              class="about-image lazyload"
+            >
             </v-img>
             <h4 class="heading-card">Syaloommuel Sirait</h4>
             <p class="text-card">Universitas Medan Area | F043XB061</p>
@@ -94,7 +116,10 @@
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar2-min.png')" class="about-image lazyload">
+            <v-img
+              :src="require('../assets/avatar2-min.png')"
+              class="about-image lazyload"
+            >
             </v-img>
             <h4 class="heading-card">Satyo Gusti Anugrah</h4>
             <p class="text-card">
@@ -104,7 +129,10 @@
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar3-min.png')" class="about-image lazyload">
+            <v-img
+              :src="require('../assets/avatar3-min.png')"
+              class="about-image lazyload"
+            >
             </v-img>
             <h4 class="heading-card">Azzam Ghufron Nasution</h4>
             <p class="text-card">Universitas Malikussaleh | F016XB056</p>
@@ -112,7 +140,10 @@
         </v-col>
         <v-col cols="12" md="3">
           <div class="card">
-            <v-img :src="require('../assets/avatar2-min.png')" class="about-image lazyload">
+            <v-img
+              :src="require('../assets/avatar2-min.png')"
+              class="about-image lazyload"
+            >
             </v-img>
             <h4 class="heading-card">Mohammad Hoki Rezky</h4>
             <p class="text-card">
@@ -213,7 +244,6 @@ export default {
 }
 
 @media (max-width: 600px) {
-
   /* Override text-center on medium and larger devices */
   .text-xs-center {
     text-align: center !important;

@@ -16,12 +16,21 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <v-text-field v-model="searchQuery" label="Search" placeholder="Jeruk 5kg" outlined dense></v-text-field>
+        <v-text-field
+          v-model="searchQuery"
+          label="Search"
+          placeholder="Jeruk 5kg"
+          outlined
+          dense
+        ></v-text-field>
       </v-col>
     </v-row>
     <v-row>
       <v-layout align-center justify-center v-if="paginatedItems.length === 0">
-        <span>Tidak ada barang dengan nama <strong>" {{ searchQuery }} "</strong></span>
+        <span
+          >Tidak ada barang dengan nama
+          <strong>" {{ searchQuery }} "</strong></span
+        >
       </v-layout>
       <v-col
         cols="12"
@@ -112,12 +121,17 @@
     <v-row class="belanjain__content">
       <v-col cols="12" class="text-center">
         <div class="divider"></div>
-        <span class="text-title animate__animated animate__backInUp">Ingin Menjual Seperti Mereka?</span>
+        <span class="text-title animate__animated animate__backInUp"
+          >Ingin Menjual Seperti Mereka?</span
+        >
       </v-col>
       <v-col cols="12" class="text-center">
-        <span>Mari menjual bersama kami di fitur 
+        <span
+          >Mari menjual bersama kami di fitur
           <span class="text-highlight">Jualin!</span>
-          oleh PaneninJualin. Anda hanya perlu untuk mengisi form untuk barang yang ingin anda jual!</span>
+          oleh PaneninJualin. Anda hanya perlu untuk mengisi form untuk barang
+          yang ingin anda jual!</span
+        >
       </v-col>
       <v-col cols="12" class="text-center mt-3">
         <button class="btn__">
@@ -125,7 +139,6 @@
         </button>
       </v-col>
     </v-row>
-
 
     <!-- Dialog dan Button dengan Model -->
 
@@ -151,7 +164,11 @@
           <v-row>
             <v-col cols="12" v-for="(item, index) in itemsCart" :key="index">
               <v-card outlined shaped color="green darken-2">
-                <v-img :src="item.gambar" height="150px" class="lazyload"></v-img>
+                <v-img
+                  :src="item.gambar"
+                  height="150px"
+                  class="lazyload"
+                ></v-img>
                 <v-card-title>
                   <span style="color: white">{{ item.namaBarang }}</span>
                 </v-card-title>
@@ -244,7 +261,7 @@ export default {
       const startIndex = (this.currentPage - 1) * this.itemsPerPage
       const endIndex = startIndex + this.itemsPerPage
 
-      const foundItems = this.items.filter((item) => 
+      const foundItems = this.items.filter((item) =>
         item.namaBarang.toLowerCase().includes(this.searchQuery.toLowerCase())
       )
 
@@ -372,7 +389,6 @@ export default {
         })
       })
     }
-    
   },
 
   head() {

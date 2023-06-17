@@ -1,10 +1,19 @@
 <template>
   <div class="container">
     <v-layout align-center justify-center column>
-      <span class="animate__animated animate__backInDown text-green darken-2 thankyou" style="font-size: 3rem; font-weight: 600; color: #1b5e20">Terima Kasih!</span>
-      <span class="subtext">sudah menggunakan PaneninJualin sebagai platform jual beli hasil tani!. Sampai bertemu di pemesanan berikutnya!</span>
+      <span
+        class="animate__animated animate__backInDown text-green darken-2 thankyou"
+        style="font-size: 3rem; font-weight: 600; color: #1b5e20"
+        >Terima Kasih!</span
+      >
+      <span class="subtext"
+        >sudah menggunakan PaneninJualin sebagai platform jual beli hasil tani!.
+        Sampai bertemu di pemesanan berikutnya!</span
+      >
       <span>
-        <a href="/" style="text-decoration: none; color: rgb(47, 47, 231)">Kembali ke Home</a>
+        <a href="/" style="text-decoration: none; color: rgb(47, 47, 231)"
+          >Kembali ke Home</a
+        >
       </span>
     </v-layout>
   </div>
@@ -30,10 +39,10 @@ export default {
       for (let i = 0; i < 10; i++) {
         const randomIndex = Math.floor(Math.random() * num.length)
         result += num[randomIndex]
-      } 
+      }
 
       return result
-    }
+    },
   },
 
   created() {
@@ -51,10 +60,19 @@ export default {
       })
 
       const documentDefinition = {
-        watermark: { text: '© PaneninJualin ©', color: 'green', opacity: 0.3, bold: false, italics: true },
+        watermark: {
+          text: '© PaneninJualin ©',
+          color: 'green',
+          opacity: 0.3,
+          bold: false,
+          italics: true,
+        },
         content: [
           { text: 'Keranjang Belanja', style: 'header' },
-          { text: 'Berikut adalah hasil cetak checkout dari keranjang belanja anda.', margin: [0, 40, 0, 0] },
+          {
+            text: 'Berikut adalah hasil cetak checkout dari keranjang belanja anda.',
+            margin: [0, 40, 0, 0],
+          },
           {
             table: {
               headerRows: 1,
@@ -65,10 +83,22 @@ export default {
               ],
             },
           },
-          { text: `Total Belanja: Rp${totalBelanja}`, bold: true, alignment: 'left', margin: [0, 10, 40, 0] },
-          { text: 'Transfer QRIS melalui barcode dibawah.', style: 'textTransfer' },
+          {
+            text: `Total Belanja: Rp${totalBelanja}`,
+            bold: true,
+            alignment: 'left',
+            margin: [0, 10, 40, 0],
+          },
+          {
+            text: 'Transfer QRIS melalui barcode dibawah.',
+            style: 'textTransfer',
+          },
           { qr: 'PaneninJualin Dummy QRCode', fit: '160', style: 'alignLeft' },
-          { text: 'Terima kasih sudah mempercayai platform PaneninJualin, sampai bertemu di pemesanan berikutnya!', alignment: 'center', margin: [0, 40] }
+          {
+            text: 'Terima kasih sudah mempercayai platform PaneninJualin, sampai bertemu di pemesanan berikutnya!',
+            alignment: 'center',
+            margin: [0, 40],
+          },
         ],
         styles: {
           header: {
@@ -84,7 +114,7 @@ export default {
           },
           alignLeft: {
             alignment: 'left',
-          }
+          },
         },
       }
 
@@ -105,7 +135,8 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .thankyou, .subtext {
+  .thankyou,
+  .subtext {
     text-align: center;
   }
 }

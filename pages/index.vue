@@ -3,7 +3,9 @@
     <v-container fluid>
       <v-row align="center" :row-reverse="$vuetify.breakpoint.mdAndUp">
         <v-col cols="12" md="6" class="text-center" order="2" order-md="1">
-          <h2 class="landing-heading animate__animated animate__backInDown">Jual Hasil Tanimu Bersama Kami</h2>
+          <h2 class="landing-heading animate__animated animate__backInDown">
+            Jual Hasil Tanimu Bersama Kami
+          </h2>
           <p class="landing-description">
             Membantu petani meningkatkan pendapatan mereka dengan memperluas
             jangkauan pasar.
@@ -23,7 +25,11 @@
 
     <v-container class="heading-all heading-section">
       <div class="divider-visi"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInLeft">Layanan Kami</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInLeft"
+      >
+        Layanan Kami
+      </h3>
       <p class="about-subdescription text-center">
         Berikut adalah daftar layanan yang kami sediakan:
       </p>
@@ -71,7 +77,11 @@
 
     <v-container class="heading-all heading-section">
       <div class="divider-team"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInRight">Mengapa PaneninJualin</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInRight"
+      >
+        Mengapa PaneninJualin
+      </h3>
       <p class="about-subdescription">
         Kami menyediakan layanan yang memudahkan petani untuk menjual hasil tani
         mereka secara online. Berikut adalah beberapa alasan mengapa harus
@@ -112,12 +122,20 @@
 
     <v-container class="heading-all heading-section">
       <div class="divider-visi"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInLeft">Article</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInLeft"
+      >
+        Article
+      </h3>
       <p class="about-subdescription text-center">
         Berikut merupakan Beberapa artikel penting terkait Bertani
       </p>
       <v-expansion-panels>
-        <v-expansion-panel v-for="(article, index) in articles" :key="index" aria-label="farm articles">
+        <v-expansion-panel
+          v-for="(article, index) in articles"
+          :key="index"
+          aria-label="farm articles"
+        >
           <v-expansion-panel-header class="article-title">{{
             article.title
           }}</v-expansion-panel-header>

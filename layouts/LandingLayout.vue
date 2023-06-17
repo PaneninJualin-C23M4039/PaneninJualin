@@ -44,7 +44,11 @@
 
     <v-app-bar max-height="64" class="white" elevation="4" fixed>
       <v-toolbar-title class="mr-6" style="">
-        <nuxt-link to="/" style="color: #1b5e20; font-weight: 800; text-decoration: none;">PaneninJualin</nuxt-link>
+        <nuxt-link
+          to="/"
+          style="color: #1b5e20; font-weight: 800; text-decoration: none"
+          >PaneninJualin</nuxt-link
+        >
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-md-and-up">
@@ -127,10 +131,11 @@
           efisien. Aplikasi ini memungkinkan petani untuk menjual produk
           pertanian mereka secara langsung kepada konsumen atau pembeli
           potensial melalui platform online. Dengan fitur-fitur seperti
-          'Jualin', 'Belanjain', dan 'Informasi', PaneninJualin memberikan kemudahan bagi
-          petani untuk meningkatkan akses pasar dan meningkatkan pendapatan
-          mereka. Dengan demikian, aplikasi ini dapat membantu untuk memperkuat
-          rantai pasok pertanian dan mendukung pertumbuhan ekonomi petani.
+          'Jualin', 'Belanjain', dan 'Informasi', PaneninJualin memberikan
+          kemudahan bagi petani untuk meningkatkan akses pasar dan meningkatkan
+          pendapatan mereka. Dengan demikian, aplikasi ini dapat membantu untuk
+          memperkuat rantai pasok pertanian dan mendukung pertumbuhan ekonomi
+          petani.
         </v-card-text>
 
         <v-card-text

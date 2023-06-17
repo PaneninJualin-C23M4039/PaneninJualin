@@ -3,7 +3,9 @@
     <v-container fluid class="about-we">
       <v-row align="center">
         <v-col cols="12" md="8" class="text-xs-center">
-          <h2 class="about-heading animate__animated animate__backInDown">Informasi Seputar Hasil Tani</h2>
+          <h2 class="about-heading animate__animated animate__backInDown">
+            Informasi Seputar Hasil Tani
+          </h2>
           <p class="about-description">
             Hasil tani, sumber kehidupan kita. Biarkan informasi memperkaya
             pengetahuanmu tentang keajaiban alam yang melimpah di ladang dan
@@ -11,7 +13,10 @@
           </p>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img :src="require('../assets/info1-min.png')" class="about-image lazyload">
+          <v-img
+            :src="require('../assets/info1-min.png')"
+            class="about-image lazyload"
+          >
           </v-img>
         </v-col>
       </v-row>
@@ -19,7 +24,11 @@
 
     <v-container class="heading-all">
       <div class="divider-visi mb-1"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInLeft">Manfaat & Tujuan</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInLeft"
+      >
+        Manfaat & Tujuan
+      </h3>
       <v-row class="text-center">
         <v-col cols="12" md="6">
           <h3 class="about-subheading">Manfaat</h3>
@@ -41,13 +50,28 @@
 
     <v-container class="heading-all heading-section">
       <div class="divider-visi mb-1"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInRight">Hasil Tani</h3>
+      <h3
+        class="about-heading text-center animate__animated animate__backInRight"
+      >
+        Hasil Tani
+      </h3>
       <p class="about-subdescription text-center">
-        Kenali manfaat dan khasiat dari hasil tani yang sering dipasarkan di PaneninJualin :
+        Kenali manfaat dan khasiat dari hasil tani yang sering dipasarkan di
+        PaneninJualin :
       </p>
-      <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-      slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        effect="coverflow"
+        grab-cursor="true"
+        centered-slides="true"
+        slides-per-view="auto"
+        coverflow-effect-rotate="50"
+        coverflow-effect-stretch="0"
+        coverflow-effect-depth="100"
+        coverflow-effect-modifier="1"
+        coverflow-effect-slide-shadows="true"
+      >
         <swiper-slide v-for="(item, index) in informasiList" :key="index">
           <div class="card">
             <v-img :src="item.image" class="about-image lazyload"></v-img>
@@ -55,17 +79,22 @@
             <p class="text-card">{{ item.desc }}</p>
           </div>
         </swiper-slide>
-      <div class="swiper-pagination"></div>
+        <div class="swiper-pagination"></div>
       </swiper-container>
     </v-container>
 
-    <v-container class="heading-all heading-section" style="background-color: rgb(245, 245, 245); padding: 2rem;">
+    <v-container
+      class="heading-all heading-section"
+      style="background-color: rgb(245, 245, 245); padding: 2rem"
+    >
       <div class="divider-visi mb-1"></div>
-      <h3 class="about-heading text-center animate__animated animate__backInUp">Tertarik?</h3>
+      <h3 class="about-heading text-center animate__animated animate__backInUp">
+        Tertarik?
+      </h3>
       <p class="about-subdescription text-center">
-        Temukan produk pilihan anda di fitur 
-        <span class="text-highlight">Belanjain</span>. 
-        Temukan produk menarik, checkout secara langsung tanpa harus register maupun login!
+        Temukan produk pilihan anda di fitur
+        <span class="text-highlight">Belanjain</span>. Temukan produk menarik,
+        checkout secara langsung tanpa harus register maupun login!
       </p>
       <button class="btn__">
         <nuxt-link to="/belanjain">Belanja Disini</nuxt-link>
@@ -141,7 +170,7 @@ export default {
           image: require('../assets/bawang.png'),
           desc: 'Bawang merah mengandung senyawa alil sulfida yang membantu mencegah penyakit jantung. Sedangkan flavonoid quercetin pada bumbu masak ini, membantu menurunkan tekanan darah dan peradangan.',
         },
-      ]
+      ],
     }
   },
   head() {
@@ -265,7 +294,6 @@ export default {
 }
 
 @media (max-width: 768px) {
-
   /* Override text-center on medium and larger devices */
   .text-xs-center {
     text-align: center !important;
