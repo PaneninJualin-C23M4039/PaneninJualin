@@ -18,6 +18,7 @@ export default {
           'Temukan berbagai produk hasil tani segar dan berkualitas di aplikasi jual beli hasil tani. Belanja langsung dari petani lokal dan dukung pertanian berkelanjutan.',
       },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'dicoding:email', content: 'f040xb344@dicoding.org' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
